@@ -1,0 +1,200 @@
+
+/* adjust the navbar a bit to make it look right */
+.mainleftnav {
+	margin-top: 200px;
+}
+
+.mainleftnav span {
+	font-size: 28pt;
+	padding-top: 5px;
+}
+
+.mainleftnav li {
+	margin-bottom: 18px;
+}
+
+#navbar a {
+	border: 0;
+}
+
+#navbar span{
+	padding-top: 5px;
+	font-size: 17pt;
+}
+
+#navbar {
+	margin-top: 10px;
+}
+
+#api-loading-message {
+	margin-left: 15px;
+}
+.cooker_slider {
+	font-size: 32pt;
+}
+
+.is-countdown {
+	padding-top: 20px;
+	height: 170px;
+}
+
+.cooker_countdown {
+	font-size: 28pt;
+}
+
+/* replace tiny jquery ui buttons with bigger ones */
+.ui-spinner-button {
+	padding: 0 32px 0 0;
+}
+.ui-spinner .ui-icon, .ui-widget-content .ui-icon {
+	padding: 0 32px 0 0;
+	background-image: url('images/themeroller-icon-set-vector-32px-NA-2010-06-01.png') !important;
+}
+.ui-spinner .ui-icon-triangle-1-n {
+	background-position: 0 -32px;
+}
+.ui-icon-triangle-1-s {
+	background-position: -128px -48px !important;
+}
+
+.btn-cookbutton {
+	font-size: 38pt;
+}
+
+.recipe-quicklist button {
+	font-size: 24pt;
+}
+
+.finish_spinner_row {
+	padding-bottom: 28px;
+}
+
+.cook_spinner_row {
+
+}
+
+.start_button_row {
+	padding-top: 30px;
+}
+
+.device_in_grid {
+	margin-right: 20px;
+}
+
+.ui-effect-expand-device {
+	border: 1px solid #ccc;
+}
+
+
+/* css for cookers */
+.recipe-parent {
+	position: relative;
+	margin: 15px 0;
+	padding: 12px 12px 12px 12px;
+	background-color: #fff;
+	border: 0px solid #ddd;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.external-recipes {
+	list-style-type: none;
+}
+
+
+
+div#user-stuff {
+	margin-top: 11px;
+}
+
+.user-dropdown {
+	list-style-type: none;
+}
+
+div#api-loading {
+	margin-top: 16px;
+}
+div#api-loading > span {
+	font-size: 20pt;
+}
+
+#camera_details_tabs {
+	margin-top: 10px;
+}
+
+#camera_details_tabcontents {
+	height: 200px;
+	margin-bottom: 50px;
+}
+
+
+.pan-left-span {
+	width: 45px;
+	height: 90px;
+	display:block;
+	float: left;
+	padding-top: 15px;
+}
+
+.pan-updown-span {
+	width: 45px;
+	height: 90px;
+	display: block;
+	float: left;
+}
+
+.pan-updown-span > input {
+	margin-bottom: 10px;
+}
+.pan-right-span {
+	width: 45px;
+	height: 90px;
+	float: left;
+	display:block;
+	padding-top: 15px;
+}
+
+
+.tab-content > div {
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 8px;
+	border-radius: 0 0 4px 4px;
+}
+
+
+#cam_melody input {
+	margin-bottom: 8px;
+	margin-left: 5px;
+}
+
+
+.timeline_element > .title > .label {
+	color: #666;
+	font-size: 9pt;
+	text-transform: capitalize;
+}
+
+#timeline {
+	height: 265px;
+	overflow: auto;
+}
+
+#footer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.footer-links {
+	font-size: 12pt;
+}
+
+
+.brightconzoom {
+	width: 220px;
+	height: 23px;
+	display: block;
+}
+
+

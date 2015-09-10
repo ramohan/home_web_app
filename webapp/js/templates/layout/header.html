@@ -1,0 +1,99 @@
+
+<div class="row">
+
+	<div class="col-sm-3 col-xs-3 header-logo left-logo logoholder" id="logo" >
+	    <a href="/" title="Hubble" id="header-logo">
+	    	<img class="mainlogo blacklogo" alt="Hubble" src="/images/logo.png" />
+	    	<img class="mainlogo whitelogo" alt="Hubble" src="/images/hubbleHomepageLogo.png" />
+	    </a>
+	</div>
+
+	<div class="col-sm-9 col-xs-9" id="navbar-col">
+
+		<ul class="nav nav-tabs" data-tabs="tabs">
+			<% if(!is_mobile) { %>
+			<li class="nav_dashboard">
+				<a href="#" title="<%= lang.t('nav_dashboard') %>">
+				</a>
+			</li>
+			<li class="deviceminilist-tab">
+				<a href="#device_minilist_tab" data-toggle="tab"
+					title="<%= lang.t('camdetails_tab_devices') %>">
+					
+				</a>
+			</li>
+			<li class="controls-tab">
+				<a href="#controls" data-toggle="tab"
+					title="<%= lang.t('camdetails_tab_controls') %>">
+					
+				</a>
+			</li>
+			<li class="timeline-tab">
+				<a href="#devicetimeline" data-toggle="tab" 
+					title="<%= lang.t('camdetails_tab_timeline') %>">
+					
+				</a>
+			</li>
+			<% } %>
+			<!-- li class="nav_timeline">
+				<a href="#timeline" title="<%= lang.t('nav_timeline') %>">
+				</a>
+			</li -->
+			<li class="nav_settings">
+				<a href="#myaccount" title="<%= lang.t('nav_settings') %>">
+				</a>
+			</li>
+			<% if (is_logged_in) { %>
+				<li class="dropdown user-dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+					<span class="active-login"><%= active_login %></span>
+						
+					<span class="dropdown"></span>
+					</a>
+
+					<ul class="dropdown-menu" role="menu">
+						<% if (session_count > 1) { %>
+							<% _.each(sessions, function(token, username) { %>
+								<li>
+									<a href="#" class="activate-login" 
+									data-login-name="<%= username %>">
+									<span class="login-name"
+										data-login-name="<%= username %>">
+										<%= username %>
+									</span>
+									</a>
+								</li>
+							<% }); %>
+						<% } %>
+						<!-- 
+						<li><a href="#" id="add-login-button">
+							<%= lang.t('header_addlogin') %></a>
+						</li>
+						-->
+
+						<li><a href="#logout" id="logout-button">
+							<%= lang.t('header_logout') %></a>
+						</li>
+					</ul>
+				</li>
+			<% } %>
+
+		</ul>
+
+	</div><!-- end navbar column -->
+
+</div><!-- end logo/nav row -->
+
+<!--
+<div class="row">
+	<div class="col-md-3" id="titlebar">
+		<span id="page_title"></span>
+	</div>
+
+	<div class="col-md-9" id="user-stuff">
+
+
+	</div><!-- end user stuff column -->
+<!-- /div><!-- end title/user stuff row -->
+
+

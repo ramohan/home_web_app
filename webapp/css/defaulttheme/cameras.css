@@ -1,0 +1,158 @@
+
+#camera_details_tabs {
+	margin-top: 10px;
+}
+
+#camera_details_tabcontents {
+	height: 200px;
+	margin-bottom: 50px;
+}
+
+
+#camera_details_tabs {
+	margin-top: 30px;
+}
+
+.plan-error {
+	color: red;
+}
+
+#cam_pan {
+	padding-left: 40px;
+}
+.pan-left-span {
+	width: 45px;
+	height: 90px;
+	display:block;
+	float: left;
+	padding-top: 35px;
+}
+
+.pan-updown-span {
+	width: 45px;
+	height: 90px;
+	display: block;
+	float: left;
+}
+
+.pan-updown-span > button {
+	margin-bottom: 40px;
+}
+.pan-right-span {
+	width: 45px;
+	height: 90px;
+	float: left;
+	display:block;
+	padding-top: 35px;
+}
+
+
+.tab-content > div {
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 8px;
+	border-radius: 0 0 4px 4px;
+}
+
+
+#cam_melody input {
+	margin-bottom: 8px;
+	margin-left: 5px;
+}
+
+#camera_details_tabs {
+	margin-top: 30px;
+}
+
+.timeline_element > .title > .label {
+	color: #666;
+	font-size: 9pt;
+	text-transform: capitalize;
+}
+
+#timeline {
+	height: 265px;
+	overflow: auto;
+}
+
+#sharing {
+	height: 265px;
+	overflow: auto;
+}
+
+.brightconzoom {
+	width: 220px;
+	height: 40px;
+	display: block;
+}
+
+
+div#cam_volume {
+	width: 220px;
+}
+
+.timeline-videodownload {
+	margin-top: -2px;
+}
+
+.timeline-videodownload span {
+	color: #556677;
+}
+
+.temperature-display {
+	font-size: 22pt;
+	padding-right: 20px;
+}
+
+.temperature-display span.degrees-symbol {
+	position: relative;
+	top: -2px;
+	left: -10px;
+}
+
+
+#take-snapshot{
+	font-size:28pt;
+	margin:22px 0 0 -26px;
+	padding: 10px 20px 4px 20px;
+}
+
+table.camera-access-log {
+	width: 700px;
+}
+
+table.camera-access-log td {
+	padding: 2px;
+}
+
+
+.toggles-row {
+	margin-bottom: 14px;
+}
+
+span.toggles-label {
+	position: relative;
+	top: 7px;
+}
+
+.toggle-high-quality {
+	margin-top: 8px;
+	font-weight: bold;
+}
+
+#high-temp-display, #low-temp-display {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+
+#download-snapshot {
+	position: relative;
+	left: -16px;
+}
+
+

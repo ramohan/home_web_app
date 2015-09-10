@@ -1,0 +1,24 @@
+
+<div class="login-container text-center container">
+	<div class="login-form row">
+		<form id="login_form" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+			<div class="login_info"></div>
+
+			<label for="username"><%= lang.t('login_username') %></label>
+			<input type="text" name="username" size="30" maxlength="255" placeholder="<%= lang.t('login_username') %>">
+
+			<label for="password"><%= lang.t('login_password') %></label>
+			<input type="password" name="password" size="30" placeholder="<%= lang.t('login_password') %>">
+
+			<div class="centeredbuttons text-center">
+				<button type="submit" class="btn" id="login_submit">
+					<%= lang.t('login_submit') %>
+				</button>
+			</div>
+
+			<span class="login-forgotpw-msg"><%= lang.t('login_forgotpw') %></span>
+		</form>
+
+	</div>
+</div>
+

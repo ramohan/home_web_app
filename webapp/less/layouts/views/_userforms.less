@@ -1,0 +1,111 @@
+
+.account-mgmt-form, .register-form, .password-form {
+
+	h2.plan-title {
+		margin-bottom: 20px;
+	}
+
+	ul.password-info {
+		list-style-type: none;
+		margin-top: 16px;
+	}
+
+	.form-subheader {
+		margin-bottom: 25px;
+		font-weight: bold;
+		font-size: 21px;
+	}
+
+	.form-group {
+		background: #eee;
+		.lh-border-radius(5px);
+		padding: 30px;
+
+		&.current-password {
+			background: #F3B017;
+			// background: rgba(243, 176, 23, 0.5);
+			//color: rgba(225,115,40,1);
+			color: #fff;
+
+			.glyphicon {
+				position: relative;
+				top: 2px;
+				margin-top: 5px;
+			}
+		}
+	}
+
+	label {
+			display: inline-block;
+			clear: both;
+			font-weight: normal;
+			margin-right: 20px;
+			margin-bottom: 0;
+			margin-top: 12px;
+		}
+
+
+	input {
+		width: 100%;
+		border: none;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		padding: 10px 15px;
+
+		.lh-border-radius(3px);
+
+		&.form-control {
+			height: auto;
+		}
+	}
+
+	hr {
+		border-color: #ddd;
+	}
+
+	.form-errors {
+		margin-top: 10px;
+		color: #d9534f;
+	}
+
+	.btn-wrapper {
+		text-align: center;
+
+		.btn-primary, .btn-default {
+			margin-left: 0;
+			font-weight: 300;
+			font-size: 18px;
+			width: 130px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+
+			.lh-border-radius(6px);
+
+			.lh-transition(all 100ms ease);
+
+			&.complete-reg {
+				width: auto;
+			}
+		}
+
+		.btn-default {
+			&:hover {
+				color: #fff;
+				background-color: #aaa;
+				border: none;
+			}
+		}
+	}
+}
+
+.register-form, .password-form {
+	.btn-wrapper {
+		margin-top: 20px;
+	}
+}
+
+#registration_info {
+	p > h2 {
+		color: #59C800;
+	}
+}

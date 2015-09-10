@@ -1,0 +1,167 @@
+<div class="common-form viewport-container">
+<form id="plan-form" role="form">
+
+<h4><div style="text-align: center;">Select plan</div></h4>
+<% _.each(plans, function(system_plans, key) { %>
+<!-- <div class="col-xs-<% print(9/_.size(plans)); %>"> -->
+<div class="row panel" style="background:#3da7e0;">
+<span style="color:white;">Last 
+<% 
+    if (key ==1) {
+        print("24 hours");
+    } else {
+        print(key);
+        print(" days");
+    }
+ %> 
+ days Motion Detection Video</span><br>
+  <% _.each(system_plans, function(plan) { %>
+  <br>
+  <span style="color:white;">
+<input <% if (plan.current) print("checked");%> type="radio" class="plan_radio" name="apply_plan_name" value="<%= plan.plan_name %>">&nbsp
+
+$
+<% print(plan.price_cents/100 + "&nbsp");
+if (plan.renewal_period_month == 1) { 
+	print("(Monthly)");
+} else if (plan.renewal_period_month == 12) { 
+	print("(Yearly)"); 
+ } else { 
+print("(every " + plan.renewal_period_month + "months)");
+ } %>
+ </span>
+ <span id="span_state_<%=  plan.plan_name %>">
+<% if (plan.current) { %>
+<span style="color:red;">
+    <% print(plan.state); %>
+</span>
+	<input type="hidden" name="current_subscription_id" value="<%= plan.subscription_uuid  %>"/>
+	<input type="hidden" name="current_subscription_name" value="<%= plan.plan_name  %>"/>
+	<input type="hidden" name="current_subscription_days" value="<%= plan.data_retention_days  %>"/>
+    <input type="hidden" name="current_subscription_state" value="<%= plan.state  %>"/>
+<% } %>
+</span>
+<% }); %>
+</div>
+<% }); %>
+<div class="row panel" id="freemium-plan" style="display:none;background:#3da7e0;">
+<span style="color:white;">Free streaming, motion/sound/temperature alerts.<br><br>
+<input type="radio" class="plan_radio" name="apply_plan_name" value="freemium" data_plan_current=false data_plan_days=0>&nbsp
+Live Streaming!
+
+</span>
+</div>
+</div>
+
+</div>
+<br>
+<div class="row">
+<h4><div style="text-align: center;">Select devices to apply</div></h4>
+<% _.each(device_plans, function(device_plan) { %>
+<div class="form-control">
+<input type="checkbox" name="devices" value="<%= device_plan.registration_id %>">
+<label for="<%= device_plan.plan_name %>">&nbsp<%= device_plan.device_name %> (<%= device_plan.plan_name %>)</label><br>
+</div>
+<% }); %><br><br>
+
+</div>
+
+
+
+<div class="form-group credit-card-form row" id="subscription_form">
+<div class="col-xs-6 panel">
+		<h4><div style="text-align: center;">Payment Information </div><br></h4>
+		<label for="number">
+			<%= lang.t('credit_card_number') %>
+		</label>
+		<input class="form-control" type="text" name="number" value="4111-1111-1111-1111">
+        <span class="number-errors plan-error"></span><br>
+
+		<label for="credit_card_month">
+			<%= lang.t('credit_card_month') %>
+		</label>
+		<select class="form-control" type="text" name="month" value="1">
+        <% _(12).times(function(n) { n += 1; print("<option value='" + n + "'>" + n + "</option>")}); %>
+        </select>
+
+		<label for="credit_card_year">
+			<%= lang.t('credit_card_year') %>
+		</label>
+		<select class="form-control" type="select" name="year">
+        <% _(14).times(function(n) { n += 14; print("<option value='" + n + "'>20" + n + "</option>")}); %>
+        </select>
+        <span class="expiry-errors plan-error"></span><br>
+
+
+		<label for="credit_card_cvv">
+			<%= lang.t('credit_card_cvv') %>
+		</label>
+		<input class="form-control" type="text" name="cvv" value="123">
+        <span class="cvv-errors plan-error"></span><br>
+
+		<label for="credit_card_first_name)">
+			<%= lang.t('credit_card_first_name') %>
+		</label>
+		<input class="form-control" type="text" name="first_name" value="john">
+        <span class="first_name-errors plan-error"></span><br>
+
+		<label for="credit_card_last_name)">
+			<%= lang.t('credit_card_last_name') %>
+		</label>
+		<input class="form-control" type="text" name="last_name" value="doe">
+        <span class="last_name-errors plan-error"></span><br>
+        </div>
+
+        <div class="col-xs-6 panel">
+
+        <h4><div style="text-align: center;">Billing Information </div><br></h4>
+
+        <label for="address1)">
+            <%= lang.t('credit_card_address1') %>
+        </label>
+        <input class="form-control" type="text" name="address1">&nbsp
+        <input class="form-control" type="text" name="address2">
+        <span class="card_address1-errors plan-error"></span><br>
+
+        <label for="city">
+            <%= lang.t('credit_card_city') %>
+        </label>
+        <input class="form-control" type="text" name="city">
+        <span class="card_city-errors plan-error"></span><br>
+
+        <label for="state">
+            <%= lang.t('credit_card_state') %>
+        </label>
+        <input class="form-control" type="text" name="state">
+        <span class="card_state-errors plan-error"></span><br>
+
+        <label for="postal_code)">
+            <%= lang.t('credit_card_postal') %>
+        </label>
+        <input class="form-control" type="text" name="postal_code">
+        <span class="card_postal_code-errors plan-error"></span><br>
+
+        <label for="country)">
+            <%= lang.t('credit_card_country') %>
+        </label>
+        <input class="form-control" type="text" name="country">
+        <span class="card_country-errors plan-error"></span><br>
+        </div>
+		
+		<input type="hidden" name="recurly-token" data-recurly="token">
+
+		
+	
+	<div class="user-message">
+		<p></p>
+	</div>
+</div>
+
+<button class="btn btn-primary submit_subscn" type="submit" name="createsubscription_submit">
+			<%= lang.t('createsubscription_submit') %>
+		</button>
+		<button class="btn btn-default submit_reset" type="reset" name="createsubscription_reset">
+			<%= lang.t('createsubscription_reset') %>
+		</button>
+</form>
+</div>

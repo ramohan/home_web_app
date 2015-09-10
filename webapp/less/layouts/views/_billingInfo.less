@@ -1,0 +1,460 @@
+body.billingInfo, body.updateBillingInfo {
+	// min-height: 1400px;
+}
+
+body.billingInfo {
+	.modal-backdrop {
+		display: none;
+	}
+
+	.modal {
+		background: #000;
+		background: rgba(0,0,0,0.5);
+
+		.modal-dialog {
+			height: 95%;
+		}
+
+		.modal-content {
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.modal-header {
+		    background: #e5e5e5;
+		}
+
+		.modal-body {
+			max-height: 95%;
+			overflow: scroll;
+			padding-bottom: 100px;
+		}
+
+		.modal-title {
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.modal-footer {
+			position: absolute;
+			background: #aaa;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			.lh-border-bottom-right-radius(5px);
+			.lh-border-bottom-left-radius(5px);
+
+			.accept-check {
+				margin-top: 3px;
+				margin-right: 20px;
+
+				span {
+					font-size: 20px;
+					color: #fff;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+.billinginfo-page {
+	padding-top: 40px;
+
+	.plan-title {
+		margin-bottom: 50px;
+	}
+
+	.billing-info-form {
+		margin: 0 auto;
+	}
+
+	.credit-card-section {
+		clear: left;
+	}
+
+	.address-section {
+		clear: left;
+	}
+
+	.validation-error {
+		display: block;
+		// Comment below for testing
+		display: none;
+		float: left;
+		clear: left;
+	}
+
+	.plan-details-section {
+		display: block;
+	}
+
+	.annual.pending-plan {
+		margin-top: 35px;
+	}
+
+	.plan-box {
+		padding-bottom: 30px;
+
+		.plan-name {
+			padding: 17px 0 15px;
+		}
+
+		&.plan-annual {
+			margin-top: 35px;
+			padding: 30px;
+			border: none;
+			background: #F3B017;
+			color: #fff;
+
+			&:before {
+				display: none;
+			}
+
+			.plan-cost {
+				font-size: 32px;
+
+				.per-year {
+					font-size: 24px;
+					display: inline-block;
+				}
+
+				.plan-dollar {
+					font-size: 15px;
+					margin-right: 2px;
+				}
+			}
+
+			.btn.to-annual {
+				margin-top: 15px;
+				margin-bottom: 0;
+				display: block;
+				max-width: 200px;
+				font-weight: 300;
+				font-size: 18px;
+				color: #fff;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				margin-top: 10px;
+				margin-left: auto;
+				margin-right: auto;
+				border: none;
+
+				.lh-border-radius(6px);
+
+				background: #59C800;
+
+				.lh-transition(all, 500ms, ease);
+
+				&.processing {
+					.lh-opacity(0.5);
+				}
+			}
+
+			.to-annual-msg {
+				margin-top: 10px;
+				
+				p {
+					font-size: 14px;
+				}
+			}
+
+			.plan-currency {
+				font-size: 10px;
+				margin-top: 15px;
+
+				.glyphicon {
+					display: inline-block;
+					font-size: 8px;
+				}
+			}
+
+			.apply-yearly-message {
+				margin-top: 20px;
+				margin-bottom: 20px;
+
+				.glyphicon {
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	.plan-pr-text {
+		margin-top: 30px;
+		display: block;
+
+		.btn.change-plan {
+			background-color: #00adf7;
+		}
+
+		.btn.reactivate-plan {
+			background: #59C800;
+			margin-top: 15px;
+			.lh-transition(all, 500ms, ease);
+
+			&.processing {
+				.lh-opacity(0.5);
+			}
+		}
+	}
+
+	.billing-secure-info {
+		font-size: 14px;
+		line-height: 21px;
+		background: rgba(255,255,255,0.5);
+		padding: 30px 30px 15px;
+		.lh-border-radius(10px);
+		margin-bottom: 50px;
+		margin-top: 0;
+
+		.glyphicon {
+			color: #31708f;
+			margin-right: 10px;
+		}
+	}	
+
+	.buttons-section {
+		clear: left;
+		float: right;
+		padding-right: 80px;
+	}
+
+	.billing-info-form {
+		&:not(.update-billing-info) {
+			.billing-info-header {
+				display: none;
+			}
+		}		
+	}
+
+	.billing-info-form-container {
+		position: relative;
+		margin-bottom: 30px;
+
+		&:before {
+			content: '';
+			display: block;
+			top: 0px;
+			bottom: 0px;
+			border-left: 1px solid #ccc;
+			position: absolute;
+			left: -50px;
+		}
+
+		button {
+			background-color: #00adf7;
+			font-weight: normal !important;
+
+			&.billing_info_no_update_submit {
+				margin-bottom: 30px;
+				background: #59C800;
+			}			
+		}
+	}
+
+	/* returning user bits */
+	.update-container {
+		font-weight: bold;
+		font-size: 14pt;
+		float: left;
+		margin-bottom: 50px;
+	}
+
+	.billing-info-wanna-update {
+		clear: left;
+		display: block;
+		font-weight: normal;
+		margin-bottom: 30px;
+	}
+
+	.update_buttons {
+		clear: both;
+		display: block;
+	}
+
+	/* end returning user bits */
+
+	 .billing-info-form {
+	 	label {
+			display: inline-block;
+			width: 140px;
+			text-align: right;
+			clear: both;
+			font-weight: normal;
+			margin-right: 20px;
+			margin-bottom: 0;
+			margin-top: 12px;
+		}
+
+		input, label {
+			float: left;
+		}
+
+		input {
+			width: 300px;
+			border: none;
+			margin-bottom: 20px;
+			padding: 10px 15px;
+
+			.lh-border-radius(3px);
+
+			.lh-transition(border 200ms ease);
+
+			&.error {
+				border: 2px solid #ff4040;
+			}
+
+			&[name="cc_first_name"], &[name="cc_last_name"] {
+				width: 140px;
+			}
+
+			&[name="cc_first_name"] {
+				margin-right: 20px;
+			}
+
+			&[name="cc_xp_month"], &[name="cc_xp_year"] {
+				width: 100px;
+			}
+
+			&[name="cc_xp_month"] {
+				border-right: 1px solid #bebebe;
+				.lh-border-top-right-radius(0);
+				.lh-border-bottom-right-radius(0);
+			}
+
+			&[name="cc_xp_year"] {
+				.lh-border-top-left-radius(0);
+				.lh-border-bottom-left-radius(0);	
+			}
+
+			&[name="cvv_number"] {
+				width: 90px;
+			}
+		}
+	 }
+
+	 .cc_number_wrapper {
+	 	position: relative;
+	 	float: left;
+	 	display: inline-block;
+
+	 	.glyphicon {
+	 		position: absolute;
+	 		right: 10px;
+	 		top: 15px;
+	 		color: #ccc;
+	 	}
+
+	 	input {
+	 		padding-right: 35px;
+	 	}
+	 }
+
+	 .billing-info-header {
+		 margin-bottom: 25px;
+		 font-weight: bold;
+		 font-size: 21px;
+	 }
+
+	 .credit-card-header, .billing-address-header {
+		 clear: both;
+		 font-weight: bold;
+		 font-size: 16px;
+		 float: left;
+		 margin-bottom: 20px;
+	 }
+
+	 .credit-card-section, .section-divider, .address-section {
+		 float: left;
+	 }
+
+
+	.plan-current {
+		color: red;
+	}
+
+	.api-error {
+		.glyphicon {
+			margin-right: 10px;
+			top: 2px;
+		}
+	}
+
+	.billing-info-form {
+		.plan-box {
+			display: none;
+		}
+
+		button {
+			color: #fff;
+			padding: 12px 18px 12px 18px;
+			border: 0;
+			font-weight: bold;
+			border-radius: 6px;
+			-moz-border-radius: 6px;
+
+			&[type="submit"] {
+				background-color: #00adf7;
+				margin-right: 20px;
+
+				&:hover {
+					background-color: #20cdff;
+				}
+			}
+
+			&[type="reset"] {
+				background-color: #b9b9b9;
+
+				&:hover {
+					background-color: #d9d9d9;
+				}
+			}
+		}
+	}
+
+	 .cvv_number_wrapper {
+	 	position: relative;
+	 	float: left;
+	 	display: inline-block;
+
+	 	button {
+	 		padding: 0;
+	 		background: transparent;
+	 		border: none;
+	 		height: 13px;
+	 		width: 13px;
+	 		color: #aaa;
+	 		position: absolute;
+	 		top: 14px;
+	 		margin-left: 10px;
+	 		cursor: pointer;
+
+	 		.lh-transition(all 100ms ease);
+
+	 		outline: none;
+	 		outline: 0;
+
+	 		&:hover {
+	 			color: #515151;
+	 		}
+
+	 		.glyphicon {
+	 			top: -2px;
+	 			left: -2px;
+	 		}
+	 	}
+
+	 	.popover {
+	 		font-size: 9pt;
+	 		max-width: 300px;
+
+			.popover-content {
+				width: 275px;
+			}
+	 	}
+	 }	
+	
+}

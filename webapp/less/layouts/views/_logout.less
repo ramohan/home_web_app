@@ -1,0 +1,70 @@
+/** Logout overlay **/
+
+div.logout-logo-container {
+	}
+
+	div.logout-logo {
+		margin-top: 25px;
+	}
+
+	div.logout-modal-container {
+		width: 100%;
+		margin-top: 25%;
+	}
+
+	div#logout_overlay {
+		display: none;
+		background: url(/images/hubbleLogout_ieBackground.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	div#logout_overlay .modal-content {
+		text-align: center;
+		padding: 10px;
+		color: #ffffff;
+		border:none;
+		font-size: 1.5em;
+		background-color: transparent; 
+		-webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
+		-moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+		-o-box-shadow: 0 5px 15px rgba(0,0,0,0);
+		box-shadow: 0 5px 15px rgba(0,0,0,0);
+		text-align:center;
+	}
+
+	#logout_confirm {
+		padding : 0 0 0 0;
+		text-align: center;
+	}
+
+	div#logout_overlay .modal-content .btn {
+		color: #ffffff;
+		width: 170px;
+		margin-top: 1em;
+		background-color: #00adf7;
+		text-align: center;
+
+		&:first-child {
+			margin-right: 10px;
+		}
+	}
+
+	div#logout_overlay .header-logo {
+		margin-left:4em;
+		margin-top:100px; 
+	}
+
+	#logout_confirmed, #cancel_logout {
+		border-radius: 2.5px !important;
+		-moz-border-radius: 2.5px !important; 
+		border: 0;
+	}
+
+	#logout_confirmed:hover, #cancel_logout:hover {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}

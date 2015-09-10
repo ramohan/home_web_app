@@ -1,0 +1,72 @@
+
+<div class="breadcrumb_container">
+	<div class="container">
+		<div class="row">
+			<div id="breadcrumbs" class="col-md-10 col-md-offset-1"></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="devsub-container container">
+	<div class="row">
+		<div class="devsub col-md-10 col-md-offset-1">
+		<h2 class="subs-pageheader devsub-header">
+			<%= lang.t('devsubs_header') %>
+		</h2>
+
+		<div class="devsub-info">
+			<% if(user_has_devices) { %>
+			<%= devsubs_info_msg %>
+
+			<div class="devsub-remaining-desc">
+				<span class="glyphicon glyphicon glyphicon-th-list" aria-hidden="true"></span>
+				<%= lang.t('devsubs_subs_remaining') %>
+				<span class="devsub-remaining">
+					<%= device_subscriptions_remaining %>
+				</span>
+			</div>
+
+			<% if(user_pending_plan) { %>
+			<div class="pending-plan">
+				<%= pending_message %>
+			</div>
+			<% } %>
+
+			<% } else { %>
+			<div class="no-devices pending-plan">
+				<%= lang.t('devsub_no_device') %>
+			</div>
+			<% } %>
+		</div>
+
+		<div class="devsub-list row">
+			<% _.each(devices, function(device, idx) { %>
+			<div class="devsub-device col-md-4" data-device-registration-id="<%= device.registration_id %>">
+				<div class="devsub-device-inner">
+					<div class="devsub-thumb">
+						<img src="<%= device['snaps_url'] %>">
+					</div>
+
+					<div class="devsub-item-nameplate">
+						<span class="devsub-name"><%= device['name'] %></span>
+						<div class="slider-wrap clearfix">
+							<span>
+								<%= devsubs_apply_sub %>
+							</span>
+							<div class="slider-frame device-toggle"
+								data-device-registration-id="<%= device.registration_id %>">
+								<span class="slider-button"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<% }); %>
+		</div>
+
+		</div>
+	</div>
+</div>
+

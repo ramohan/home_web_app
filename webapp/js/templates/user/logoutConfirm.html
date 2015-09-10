@@ -1,0 +1,29 @@
+
+<div class="logout-logo-container container">
+	<div class="row">
+		<div class="logout-logo col-md-12" id="logo" >
+			<a href="/" title="Hubble">
+				<img alt="Hubble" src="/images/hubbleHomepageLogo.png" />
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="logout-modal-container">
+	<div class="modal-dialog" role="dialog">
+		<div class="modal-content">
+			<div><%= lang.t('logout_confirmation_message') %></div>
+			<div id="logout_confirm" class="common-form">
+				<a href="#" class="btn btn-primary" id="logout_confirmed" 
+				data-dismiss="modal"><%= lang.t('logout_yesimsure') %></a>
+				<% if (session_count > 1) { %>
+					<a href="#" class="btn" data-dismiss="modal" 
+					id="logout_all_confirmed"><%= lang.t('logout_clearall') %></a>
+				<% } %>
+				<a href="#" class="btn btn-default" id="cancel_logout" 
+				data-dismiss="modal"><%= lang.t('logout_cancel') %></a>
+			</div>
+		</div>
+	</div>
+</div>
+

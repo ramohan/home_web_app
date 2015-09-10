@@ -1,0 +1,921 @@
+
+
+.logo-animation-layer { 
+	position: absolute; 
+	top: 0;
+	margin-left: 0;
+}
+
+
+
+/* adjust the navbar a bit to make it look right */
+#navbar {
+	margin-right: 0;
+	padding-right: 0;
+}
+#navbar a {
+	border: 0;
+}
+
+#navbar-col {
+	margin-right: 0;
+	padding-right: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+
+#navbar span{
+	padding-top: 5px;
+	font-size: 17pt;
+}
+
+#navbar {
+	margin-top: 10px;
+}
+
+#api-loading-message {
+	margin-left: 15px;
+}
+
+.ui-effect-expand-device {
+	border: 1px solid #ccc;
+}
+
+.user-dropdown {
+	list-style-type: none;
+}
+
+div#api-loading {
+	margin-top: 16px;
+}
+div#api-loading > span {
+	font-size: 20pt;
+}
+
+
+#page_title {
+	font-size: 11pt;
+}
+
+#user-stuff {
+	padding-top: 2px;
+	text-align: right;
+}
+
+
+/* sticky footer styles */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+
+#no_devices {
+	text-align: center;
+}
+
+.logoHolder {margin: 20px 0 0 20px;}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	margin: 0;
+	
+	}
+
+	.footer-left-links {
+		font-size: 12pt;
+		padding: 23px;
+	}
+
+	.footer-right-links {
+		font-size: 11pt;
+		padding: 23px;
+	}
+
+
+	.login-container {
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #ededed;
+		text-align: center;
+	}
+
+	.login-form {
+		margin-left: auto;
+		margin-right: auto;
+		width: 400px;
+		padding: 30px;
+		overflow: auto;
+	}
+
+	.login-form input {
+		padding: 4px;
+		margin-bottom: 18px;
+		float: left;
+		clear: left;
+	}
+
+	.login-form button {
+		margin-bottom: 12px;
+	}
+
+	.login-form label {
+		float: left;
+		clear: left;
+
+	}
+
+.centeredbuttons {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+	clear: both;
+}
+
+.centeredbuttons input {
+	padding: 4px 14px 4px 14px;
+	margin: 4px;
+	float: none;
+}
+
+.login-form input[type="checkbox"] {
+	clear: none;
+	margin-left: 8px;
+}
+
+.sharing-container {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sharing-container ul {
+	margin-bottom: 34px;
+}
+
+/* common form styles */
+.common-form {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ededed;
+	padding: 30px;
+}
+
+.common-form .popinfo {
+	margin-bottom: 20px;
+}
+
+.common-form button {
+	margin-bottom: 25px;
+}
+
+.common-form input {
+	margin-bottom: 18px;
+}
+
+.common-form fieldset {
+	margin: 30px;
+}
+
+.events-before {
+	font-weight: bold;
+	padding: 5px;
+	font-size: 12pt;
+}
+
+
+
+.device_in_grid {
+	margin-right: 20px;
+}
+
+.devicelist-placeholder-image {
+	margin-left: 38px;
+}
+
+
+.gridster li > .device_in_grid {
+}
+
+	.gridster li {
+		display: block;
+		height: 206px;
+		width: 250px;
+		text-align: center;
+		float: left;
+		margin-right: 12px;
+	}
+
+
+#events_timeline, #global_timeline {
+	clear: both;
+}
+
+/* Additional Styles - Flat UI */
+
+body {
+    background-color: #d3d3d3;
+}
+
+.container {
+	padding: 20px 40px;    
+	background-color: #ffffff;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -moz-border-radius-bottomleft: 6px;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+#camera_details_tabs {
+    margin-bottom: 30px;
+}
+
+    #camera_details_tabs .tabs .active a,
+    #camera_details_tabs.tab-content .active {
+        background-color: #f1f1f1;
+    }
+
+#titlebar {
+    background-color: #3da7e0;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 14px;
+    margin-right: -14px;
+    padding: 10px 20px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright:  10px;
+    -moz-border-radius-bottomright:  10px;
+    -moz-border-radius-bottomleft:  10px;
+
+    border-top-left-radius:  10px;
+    border-top-right-radius:  10px;
+    border-bottom-right-radius:  10px;
+    border-bottom-left-radius:  10px;
+}
+
+
+/* Inner Elements */
+
+.deviceList .thumbnail {
+	padding: 0;
+}
+
+	.deviceList h4 {
+		margin: 0;
+		padding: 20px 0;
+		margin-bottom: 5px;
+		background-color: #777777;
+		font-size: 16px;
+	}
+
+	.deviceList h4 a {
+		color: #fff;
+		font-weight: normal;
+	}
+
+	.devicelist-placeholder-image {
+		width: 110px;
+	}
+
+
+div.device_in_grid {
+	float: none;
+}
+
+div.timeline_element {
+	background-color: #f8f8f8;
+}
+
+	div.timeline_element .content > div {
+		background-color: #ffffff;
+	}
+
+/* camera_details_tabs */
+
+#camera_details_tabcontents .ui-slider-horizontal {
+	margin-top: 1em;
+}
+
+/* logout */
+
+.user-dropdown .dropdown-menu {
+	min-width: 80px;
+}
+
+#events_timeline .pull-right {
+	margin-top: 19px;
+}
+
+	#events_timeline .pull-right .glyphicon {
+		min-height: 34px;
+		line-height: normal;
+	}
+
+
+.user-dropdown li {
+	font-size: 11pt;
+}
+
+.user-dropdown > li {
+	padding: 4px;
+	display: inline;
+}
+
+#mini_device_list {
+	width: 100%;
+	}
+
+	.mini-device-list .mini-device-list-item {
+		text-align: center;
+	}
+
+	.mini-device-list .thumbnail {
+		width: 230px;
+		height: 156px;
+		margin-bottom: 6px;
+	}
+
+	.mini-device-list-item .placeholder {
+		height: 110px;
+
+	}
+
+	.minidevice-active {
+		background-color: #ffffbb;
+	}
+
+
+
+.mini-device-list-item {
+display: inline;
+float: left;
+margin: 10px;
+}
+
+
+html.login { 
+	background: url(/images/filthy_humans_gradient.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	}
+
+
+	body.login, body.login > div.container, .login-container {
+		background-color: transparent;
+	}
+
+	body.login #titlebar, body.login #navbar-col, body.login #user-stuff {
+		display: none;
+	}
+
+	.login-form  button {
+		color: #fff;
+		font-weight: bold;
+		background: transparent;
+	}
+
+	.login-form, .login-form a  {
+		color: #fff;
+	}
+
+	.login-form input[type=text],
+	.login-form input[type=password] {
+		/* Size and position */
+		width: 100%;
+		padding: 8px 4px 8px 10px;
+		margin-bottom: 15px;
+		border: 1px solid #fff; /* Fallback */
+		border: 1px solid rgba(255,255,255, 0.8);
+		background: rgba(255,255,255, 0.2);
+		font-family: sans-serif;
+		color: #fff;
+		font-size: 13px;
+	}
+
+
+	.login-form input::-webkit-input-placeholder {color: #fff;}
+
+	.login-form input:-moz-placeholder {color: rgba(37,21,26,0.5);}
+
+	.login-form input:-ms-input-placeholder {
+		color: rgba(37,21,26,0.5);
+		text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+	}
+
+	.login-form input[type=text]:hover,
+	.login-form input[type=password]:hover {
+		border-color: #fff;
+	}
+
+	.login-form input[type=text]:focus,
+	.login-form input[type=password]:focus,
+	.login-form button[type=submit]:focus,
+	.login-form button[type=reset]:focus {
+		box-shadow: 
+		    0 1px 0 rgba(255,255,255,0.2), 
+		    inset 0 1px 1px rgba(0,0,0,0.1),
+		    0 0 0 3px rgba(255,255,255,0.15);
+		outline: none;
+	}
+
+	/* Fallback */
+	.no-boxshadow .login-form input[type=text]:focus,
+	.no-boxshadow .login-form input[type=password]:focus {
+		outline: 1px solid white;
+	}
+
+	.login-form button[type=submit] {
+		/* Size and position */
+		width: 100%;
+		padding: 8px 5px;
+
+		border-radius: 0 !important;
+		-moz-border-radius: 0 !important;
+		
+		/* Styles */
+		background: transparent;
+		/*border-radius: 5px; amwj */
+		border: 1px solid #fff;
+		/*box-shadow: inset 0 1px rgba(255,255,255,0.4), 0 2px 1px rgba(0,0,0,0.1); amwj */
+		cursor: pointer;
+
+		/* Font styles */
+		color: white;
+		text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+		font-size: 16px;
+		font-weight: bold;
+		font-family: 'Raleway', 'Lato', Arial, sans-serif;
+	}
+
+	.login-form button[type=submit]:hover {
+		background: #58C700;
+		color: #fff;
+		border: 1px solid #58C700;
+	}
+
+	/* Fallback */
+	.no-boxshadow .testForm input[type=submit]:hover {
+		background: #594642;
+	}
+
+	.login-form label {
+		display: none;
+		padding: 0 0 5px 2px;
+		cursor: pointer;
+		color: #ff0000;
+	}
+
+	.login-form label:hover ~ input {
+		border-color: #333;
+	}
+
+	.no-placeholder .testForm label {
+		display: block;
+	}
+
+
+	body.login #footer, body.login #footer a {
+		color: #fff;
+	}
+
+
+html.deviceDetails {
+	/* Old browsers */
+	background: #ff51a4; 
+	/* FF3.6+ */
+	background: -moz-linear-gradient(45deg,  #ff51a4 0%, #00acf7 100%); 
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ff51a4), color-stop(100%,#00acf7)); 
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(45deg,  #ff51a4 0%,#00acf7 100%); 
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(45deg,  #ff51a4 0%,#00acf7 100%); 
+	/* IE10+ */
+	background: -ms-linear-gradient(45deg,  #ff51a4 0%,#00acf7 100%); 
+	/* W3C */
+	background: linear-gradient(45deg,  #ff51a4 0%,#00acf7 100%); 
+	/* IE6-9 fallback on horizontal gradient */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff51a4', endColorstr='#00acf7',GradientType=1 ); 
+
+	margin: 0;
+	padding: 0;
+	}
+
+	body.deviceDetails, body.deviceDetails > div.container {
+		background-color: transparent;
+	}
+
+	body.deviceDetails #titlebar {
+		display: none;
+	}
+
+	html.deviceDetails body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	html.deviceDetails .container {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		margin: 0px auto;
+		text-align: center;
+	}
+
+
+	html.deviceDetails #header-row {
+width: 100%;
+		margin: 0px auto;
+		text-align: center;
+/*
+position: relative;
+top: -150px;*/
+	}
+
+	html.deviceDetails #header {
+		margin: 0px auto;
+	}
+
+	html.deviceDetails #header > .row {
+width: 1230px;
+		margin: 0px auto;
+		text-align: center;
+	}
+
+
+
+html.deviceDetails #header-transparent-layer {
+	width: 100%;
+	background-color: #fff;
+height: 160px;
+position: absolute;
+}
+
+
+
+html.deviceDetails #footer_container {
+}
+
+html.deviceDetails #footer {
+width: 100%;
+color: #fff;
+}
+
+html.deviceDetails #footer_inner {
+width: 1230px;
+margin: 0 auto;
+}
+
+html.deviceDetails #footer a {
+color: #fff;
+}
+
+
+
+/****** Camera section ******/
+
+.tab-pane {
+	border: none;
+}
+#viewport_container_container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#viewport_container {
+	width: 1170px;
+	margin: 0 auto 180px auto;
+	position: relative;
+	top: 30px;
+	left: 30px;
+}
+
+#viewport_transparency_container {
+	width: 1170px;
+	margin: 60px auto;
+}
+#viewport_transparent_layer {
+	width: 1230px;
+	height: 724px;
+	background-color: #fff;
+	padding: 20px;
+	position: absolute;
+}
+
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+
+#camera_details_tabs {
+width: 1230px;
+	margin: 10px auto;
+}
+
+#camera_details_tabcontents {
+	height: 200px;
+	margin-bottom: 50px;
+}
+
+
+#camera_details_tabs {
+	margin-top: 30px;
+}
+
+
+#cam_pan {
+	padding-left: 40px;
+}
+.pan-left-span {
+	width: 45px;
+	height: 90px;
+	display:block;
+	float: left;
+	padding-top: 35px;
+}
+
+.pan-updown-span {
+	width: 45px;
+	height: 90px;
+	display: block;
+	float: left;
+}
+
+.pan-updown-span > button {
+	margin-bottom: 40px;
+}
+.pan-right-span {
+	width: 45px;
+	height: 90px;
+	float: left;
+	display:block;
+	padding-top: 35px;
+}
+
+
+.tab-content > div {
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 8px;
+	border-radius: 0 0 4px 4px;
+}
+
+
+#cam_melody input {
+	margin-bottom: 8px;
+	margin-left: 5px;
+}
+
+#camera_details_tabs {
+	margin-top: 30px;
+}
+
+.timeline_element > .title > .label {
+	color: #666;
+	font-size: 9pt;
+	text-transform: capitalize;
+}
+
+#timeline {
+	height: 265px;
+	overflow: auto;
+}
+
+#sharing {
+	height: 265px;
+	overflow: auto;
+}
+
+.brightconzoom {
+	width: 220px;
+	height: 40px;
+	display: block;
+}
+
+
+div#cam_volume {
+	width: 220px;
+}
+
+.timeline-videodownload {
+	margin-top: -2px;
+}
+
+.timeline-videodownload span {
+	color: #556677;
+}
+
+.temperature-display {
+	font-size: 22pt;
+	padding-right: 20px;
+}
+
+.temperature-display span.degrees-symbol {
+	position: relative;
+	top: -2px;
+	left: -10px;
+}
+
+
+#take-snapshot{
+	font-size:28pt;
+	margin:22px 0 0 -26px;
+	padding: 10px 20px 4px 20px;
+}
+
+table.camera-access-log {
+	width: 700px;
+}
+
+table.camera-access-log td {
+	padding: 2px;
+}
+
+
+.toggles-row {
+	margin-bottom: 14px;
+}
+
+span.toggles-label {
+	position: relative;
+	top: 7px;
+}
+
+.toggle-high-quality {
+	margin-top: 8px;
+	font-weight: bold;
+}
+
+#high-temp-display, #low-temp-display {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+
+#download-snapshot {
+	position: relative;
+	left: -16px;
+}
+
+
+.play-melody, #stop_melody {
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	background-color: transparent;
+	border: none;
+	text-align: left;
+}
+
+.toggles-label {
+	color: #fff;
+}
+
+#controls, #device_minilist_tab, #timeline, #savedclips, #sharing {
+	border: none;
+}
+
+.slider-frame {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	width: 90px;
+	height: 50px;
+	background-color: rgb(246, 249, 251);
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	-webkit-box-shadow: inset 0px 0px 4px 0 rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: inset 0px 0px 4px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: inset 0px 0px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.slider-button {
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 27px;
+	background: #EDF2F7;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	color: #000;
+	text-align: center;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0px 0px 4px 0 rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: inset 0px 0px 4px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: inset 0px 0px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.slider-frame.on {
+	background-color: #00dd00;
+}
+
+.slider-frame.off {
+	background-color: #cc0000;
+}
+
+.slider-button.on {
+	margin-left: 40px;
+	background: #fff;
+}
+
+
+.toggles-row .ui-slider {
+	background-color: #aaa;
+	border: none;
+	height: 4px;
+}
+
+.toggles-row .ui-slider-handle {
+	margin-top: -2px;
+	border: 2px solid #fff;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+
+}
+
+.toggles-row .ui-slider-range-min {
+	background-color: #aaa;
+}
+
+}
+
+#camera_details_tabs {
+	display: none;
+}
+
+
+.slidey_drawer_transparency_container {
+	margin-top: 13px;
+}
+
+.slidey_drawer_transparency {
+	position: absolute;
+	background-color: #000;
+	width: 100%;
+	height: 300px;
+	zoom: 1;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+	display: none;
+
+}
+

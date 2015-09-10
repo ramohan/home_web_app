@@ -1,0 +1,195 @@
+.login { 
+	background: url(/images/hubbleLogin_ieBackground.jpg) no-repeat center center fixed; 
+	-webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+
+	min-height: 0;
+
+	.blacklogo {
+		display: none;
+	}
+
+	.whitelogo {
+		display: inline;
+		height: 50px;
+		margin-top: 25px;
+	}	
+
+	#loader {
+		display: none;
+	}
+
+	#content_row, #content_row #page_view, #header-wrapper, #header-row, #footer, .main-content {
+		background-color: transparent;
+	}
+
+
+	&, & > div.container, .login-container {
+		background-color: transparent;
+	}
+
+	.login-container {
+		text-align: center;
+	}
+
+	#titlebar, #navbar-col, #user-stuff {
+		display: none;
+	}
+
+	#header {
+		background-color: transparent;
+	}
+
+	.login_info {
+		background: #F3B017;
+
+		.lh-border-radius(5px);
+
+		&.display-msg {
+			padding: 15px;
+			margin-bottom: 15px;
+		}
+
+		a {
+			text-decoration: underline !important;
+		}
+	}
+
+	.login-form {
+		margin-top: 25%;
+		overflow: auto;		
+	}
+
+	.login-form  button {
+		color: #fff;
+		font-weight: bold;
+		background: transparent;
+	}
+
+	.login-form, .login-form a  {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	.login-form input {
+		padding: 4px;
+		margin-bottom: 18px;
+		float: left;
+		clear: left;
+	}	
+
+	.login-form input[type=text],
+	.login-form input[type=password] {
+		/* Size and position */
+		width: 100%;
+		/*padding: 8px 4px 8px 10px;*/
+		padding: 10px 15px;
+		margin-bottom: 15px;
+		border: 2px solid #fff; /* Fallback */
+		border: 2px solid rgba(255,255,255, 0.5);
+		background: rgba(255,255,255, 0.2);
+		font-family: sans-serif;
+		color: #fff;
+		font-size: 16px;
+
+		.lh-border-radius(3px);
+
+		.lh-transition(all 100ms ease);
+	}
+
+
+	.login-form input::-webkit-input-placeholder {color: #fff;}
+
+	.login-form input:-moz-placeholder {color: rgba(37,21,26,0.5);}
+
+	.login-form input:-ms-input-placeholder {
+		color: rgba(37,21,26,0.5);
+		text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+	}
+
+	.login-form input[type=text]:hover,
+	.login-form input[type=password]:hover,
+	.login-form input[type=taext]:focus,
+	.login-form input[type=password]:focus,
+	.login-form button[type=submit]:focus,
+	.login-form button[type=reset]:focus {
+		box-shadow: 
+		    0 1px 0 rgba(255,255,255,0.2), 
+		    inset 0 1px 1px rgba(0,0,0,0.1),
+		    0 0 0 3px rgba(255,255,255,0.15);
+		outline: none;
+		outline: 0;
+		//border-color: #fff;
+	}
+
+	/* Fallback */
+	.no-boxshadow .login-form input[type=text]:focus,
+	.no-boxshadow .login-form input[type=password]:focus {
+		outline: 1px solid white;
+	}
+
+	.login-form button {
+		margin-bottom: 12px;
+	}	
+
+	.login-form button[type=submit] {
+		/* Size and position */
+		width: 100%;
+		padding: 8px 5px;
+
+		border-radius: 2.5px !important;
+		-moz-border-radius: 2,5px !important;
+		
+		/* Styles */
+		background: #00adf7;
+		cursor: pointer;
+
+		/* Font styles */
+		color: white;
+		text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+		font-size: 16px;
+		font-weight: bold;
+		font-family: 'Raleway', 'Lato', Arial, sans-serif;
+	}
+
+	.login-form button[type=submit]:hover {
+		zoom: 1;
+		filter: alpha(opacity=80);
+		opacity: 0.8;
+	}
+
+	/* Fallback */
+	.no-boxshadow .testForm input[type=submit]:hover {
+		background: #594642;
+	}
+
+	.login-form label {
+		float: left;
+		clear: left;
+		display: none;
+		padding: 0 0 5px 2px;
+		cursor: pointer;
+		color: #ff0000;
+	}
+
+	.login-form label:hover ~ input {
+		border-color: #333;
+	}
+
+	.no-placeholder .testForm label {
+		display: block;
+	}
+
+
+	#footer, #footer a {
+		color: #fff;
+		.lh-opacity(1);
+	}
+
+}

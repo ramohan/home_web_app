@@ -1,0 +1,144 @@
+<div class="breadcrumb_container">
+	<div class="container">
+		<div class="row">
+			<div id="breadcrumbs" class="col-md-10 col-md-offset-1"></div>
+		</div>
+	</div>
+</div>
+
+<div class="myaccount-page container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<span class="subs-pageheader myaccount-header">
+				<h2><%= lang.t('myaccount_header') %></h2>
+			</span>
+
+
+			<span class="myaccount-link-block">
+				<div class="row">
+
+					<a href="/#settings" class="user-settings clearfix">
+						<span class="myaccount-link-desc col-xs-9">
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							<span class="desc"><%= lang.t('myaccount_emailpass') %></span>
+						</span>
+						<span class="myaccount-go-arrow col-xs-3">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 width="40px" height="40px" viewBox="0 0 40 40"  xml:space="preserve">
+							<path fill="#B9B9B9" d="M20,35c8.283,0,15-6.717,15-15S28.283,5,20,5S5,11.717,5,20S11.717,35,20,35z M13.945,18.385l7.826,0.057
+								l-2.48-1.984c-1.544-1.363,0.599-3.822,2.316-2.318l5.817,4.845c0.765,0.765,0.769,1.765,0,2.532l-5.794,4.867
+								c-1.719,1.504-3.839-0.932-2.317-2.316l2.458-2.008l-7.826,0.057C11.337,22.094,11.366,18.363,13.945,18.385z"/>
+							</svg>
+						</span>
+					</a>
+
+				</div>
+			</span>
+
+
+			<span class="myaccount-link-block <%= user_has_plan ? 'plan' : 'noplan' %>">
+				<span class="myaccount-link-desc plan-info">
+					<div class="col-wrapper clearfix">
+
+					<% if (!user_has_plan) { %>
+					<%= subs_message %>
+					<% } else { %>
+					<span class="myaccount-plan-text col1">
+						<%= subs_message %>
+					</span>
+
+					<div class="col2 clearfix">
+						<div class="inner">
+
+					<% if(plan_status == 'active') { %>
+					<a class="btn btn-default change-plan" href="/#subscriptions">
+					<%= lang.t('myaccount_change_plan') %>
+					<% } else if(plan_status == 'canceled') { %>
+					<a class="btn btn-default reactivate-plan" href="/#myaccount">
+					<%= lang.t('myaccount_reactivate_plan') %>
+					<% } else { %>
+					<a class="btn btn-default change-plan" href="/#subscriptions">
+					<%= lang.t('myaccount_renew_plan') %>
+					<% } %>
+					</a>
+
+					<% if(plan_status == 'active') { %>
+					<a class="btn btn-default apply-plan" href="/#subscriptions">
+						<%= lang.t('myaccount_apply_plan') %>
+					</a>
+					<% } %>
+
+						</div>
+					</div>
+
+					</div><!-- .col-wrapper -->
+
+					<% if(user_pending_plan) { %>
+					<span class="pending-plan">
+						<%= pending_message %>
+						<% if(contact_support_message) { %>
+						<br/><%= lang.t('annualpending_contact_support') %>
+						<% } %>
+					</span>
+					<% } %>
+
+					<% } %>
+
+				</span>
+
+				<% if (!user_has_plan) { %>
+				<div class="row">
+					<a href="/#subscriptions" class="shined_up_call_to_action clearfix">
+						<span class="cta_message col-xs-9">
+							<%= lang.t('myaccount_calltoaction') %>
+						</span>
+						<div class="col-xs-3 cta_arrow">
+				<% } %>
+				<span class="myaccount-go-arrow subscriptionlink"></span>
+				<% if (!user_has_plan) { %>
+						</div>
+					</a><!-- end .shined_up_call_to_action -->
+				</div>
+				<% } %>
+
+
+			</span>
+
+			<% if (user_has_plan) { %>
+			<span class="myaccount-link-block update-plan">
+				<div class="row">
+
+					<a href="/#updatebilling" class="update-billing clearfix">
+						<span class="myaccount-link-desc col-xs-9">
+							<span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+							<span class="desc"><%= lang.t('myaccount_billing') %></span>
+						</span>
+						<span class="myaccount-go-arrow col-xs-3">
+
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 width="40px" height="40px" viewBox="0 0 40 40"  xml:space="preserve">
+							<path fill="#B9B9B9" d="M20,35c8.283,0,15-6.717,15-15S28.283,5,20,5S5,11.717,5,20S11.717,35,20,35z M13.945,18.385l7.826,0.057
+								l-2.48-1.984c-1.544-1.363,0.599-3.822,2.316-2.318l5.817,4.845c0.765,0.765,0.769,1.765,0,2.532l-5.794,4.867
+								c-1.719,1.504-3.839-0.932-2.317-2.316l2.458-2.008l-7.826,0.057C11.337,22.094,11.366,18.363,13.945,18.385z"/>
+							</svg>
+
+						</span>
+					</a>
+
+				</div>
+
+			</span>
+        <div style="text-align: center; padding: 20px; margin-bottom: 40px">
+          <a
+            target="_blank"
+            href='https://hubble.recurly.com/account/<%= recurly_token %>'>
+            To review your billing cycle and invoices, click here.
+            <img
+              src="/images/icons/newWindow_icon.png"
+              style="margin-left: 10px; position: relative; top: -2px;" />
+          </a>
+        </div>
+			<% } %>
+		</div>
+	</div>
+</div>

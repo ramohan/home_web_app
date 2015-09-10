@@ -1,0 +1,248 @@
+@largeScreen: 1200px;
+@tablet:	992px;
+@mobile:	767px;
+@small: 	500px;
+@xsmall:	360px;
+
+@media (max-width: 1560px) {
+	
+}
+
+@media (max-width: @largeScreen) {
+
+	.subscription-container {
+		.plan-box {
+			.triangle-up {
+				bottom: -123px;
+			}
+		}
+	}
+
+	.billinginfo-page {
+		.billing-info-form {
+			label {
+				display: block;
+				float: none;
+				text-align: left;
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+}
+
+@media (max-width: @tablet) {
+
+	ul.nav-tabs li a {
+		width: 60px;
+	}
+
+	#zenbox_tab {
+		display: none !important;
+	}
+
+	.subscription-container {
+		.plan-box {
+			.triangle-up {
+				bottom: -115px;
+			}
+		}
+	}
+
+	.billinginfo-page {
+		.billing-info-form-container {
+			&:before {
+				left: -30px;
+			}
+		}
+	}
+}
+
+@media (max-width: @mobile) {
+
+	#navbar-col .nav-tabs li {
+		&.nav_dashboard, &.deviceminilist-tab, &.controls-tab, &.timeline-tab {
+			display: none !important;
+		}
+	}
+
+	.myaccount-link-block {
+		
+		.plan-info {
+
+			.inner {
+				float: right;
+			}
+
+			.btn {
+				float: none !important;
+				display: block;
+
+				&.apply-plan {
+					margin-right: 0 !important;
+					margin-top: 15px !important;
+				}
+			}
+		}
+	}
+
+	.subscription-container {
+		.plan-box {
+			margin-bottom: 50px;
+
+			&.highlight:after {
+				border-bottom: 3px solid #59C800;
+				height: 100%;
+			}
+
+			&:hover {
+				&:after {
+					border-bottom: 3px solid #59C800;
+					height: 100%;
+				}
+			}
+
+			.triangle-up {
+				display: none;
+			}
+		}
+
+		.cancel-plan {
+			margin-top: 0;
+		}
+	}
+
+	.billinginfo-page {
+
+		&:not(.update-billing-info) {
+
+			.plan-box {
+				&:not(.plan-annual) {
+					display: none;
+				}
+
+				&.plan-annual {
+					margin-top: 0;
+				}
+			}
+
+			.plan-details-section {
+				.billing-info-header {
+					display: none;
+				}
+			}
+		}
+
+		.billing-info-form {
+
+			.plan-box {
+				display: block !important;
+				margin-bottom: 30px;
+			}
+
+			input {
+				width: 100%;
+			}
+
+			input[name="cc_first_name"], input[name="cc_last_name"] {
+				width: 48%;
+			}
+
+			input[name="cc_first_name"] {
+				margin-right: 4%;
+			}
+		}
+
+		.credit-card-section, .cc_number_wrapper, .address-section {
+			width: 100%;
+		}
+
+		.buttons-section {
+			clear: none;
+			float: none;
+			padding-right: 0;
+		}
+	}	
+
+	.billinginfo-page .billing-secure-info, .shined_up_call_to_action,
+	.subscription-container .plans-bottomtext .plans-bottomtext-inner,
+	.device.api-error .error-wrapper, .flash-error .error-wrapper {
+		.lh-border-radius(0);
+	}	
+}
+
+@media (max-width: 650px) {
+	.footer-left-links {
+		display: none;
+	}
+}
+	 
+@media (max-width: @small) {
+	html, body {
+		height: auto;
+	}
+	
+	#header {
+		.header-logo {
+			width: 100%;
+		}
+
+		#navbar-col {
+			width: 100%;
+		}
+
+		.nav-tabs {
+			width: 100%;
+			border-top: 1px solid #ededed;
+		}
+
+		.nav-settings {
+			float: left;
+		}
+
+		.user-dropdown {
+			float: right;
+			border-left: 1px solid #ededed;
+		}
+
+	}
+
+	#breadcrumbs {
+		.breadcrumb {
+			font-size: 12px;
+
+			& > li + li:before {
+				padding: 0;
+			}
+		}
+	}
+
+	.subs {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.subs-header {
+		margin-top: 0;
+	}
+	.subs .sections {
+		float: inherit;
+		clear: both;
+		margin: 20px auto;
+	}
+
+	div#logout_overlay .modal-content .btn:first-child {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	#footer_inner {
+		width: 100%;
+	}
+
+}
+
+@media (max-width: 360px) {
+
+}

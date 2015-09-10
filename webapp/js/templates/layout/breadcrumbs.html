@@ -1,0 +1,10 @@
+<ol class="breadcrumb">
+	<% _.each(crumbs, function(crumb, idx) { %>
+		<% if (crumb['active'] || crumb['url'] === undefined) { %>
+			<li class="active"><%= crumb['name'] %></li>		
+		<% } else { %>
+			<li><a href="<%= crumb['url'] %>"><%= crumb['name'] %></a></li>
+		<% } %>
+	<% }); %>
+	
+</ol>

@@ -1,0 +1,76 @@
+
+<div class="row pull-left">
+	<div class="col-md-12">
+
+		<div class="deviceList gridster">
+			<ul>
+
+			<% 
+				var row = 1;
+				var col = 1;				
+				_.each(active_devices, function(device) { %>
+				<li class="thumbnail" data-row="<%= row %>" data-col="<%= col %>" 
+					data-sizex="1" data-sizey="1" 
+					id="device_tile_<%= device.get('id') %>">
+				<div class="device_in_grid">
+				
+				<% if (device.getType() == 'CAMERA') { %>
+
+					<h4>
+						<a data-reg-id="<%= device.get('id') %>" 
+						href="#" class="expand_device">
+							<%= device.get('name') %>
+						</a>
+					</h4>
+	
+					<div id="camera_feed_<%= device.get('id') %>" 
+						class="text-center">
+						<a data-reg-id="<%= device.get('id') %>" 
+						href="#" class="expand_device">
+						<% if (device.get('snaps_url').indexOf('hubble.png') > 0) { %>
+							<img class="devicelist-placeholder-image" 
+							src="images/hubble_logo.png"
+							alt="Camera snapshot"  
+							data-reg-id="<%= device.get('id') %>" />
+						<% } else { %>
+							<img src="<%= device.get('snaps_url') %>"
+							width="237" height="167"
+							 data-reg-id="<%= device.get('id') %>"							
+							alt="Camera snapshot" />
+						<% } %>
+						</a>
+					</div>
+	
+				<% } else if (device.getType() == 'COOKER') { %>
+				
+					<h4>
+						Cooker: <a data-reg-id="<%= device.get('id') %>" 
+						href="#" class="expand_device"><%= device.get('name') %></a>
+					</h4>
+					<h5>Status: <strong><%= device.get('is_available') ? 
+						'Online' : 'Offline' %></strong></h5>
+
+				<% } %>
+
+				</div>
+				</li>
+			<% 
+				col++;
+				if (col > DEVICES_PER_ROW) {
+					col = 1;
+					row++;
+				}
+	
+				}); %>
+			
+			</ul>
+
+		</div><!-- end div.devicelist  -->
+			
+	</div><!-- end div.col-md-11 -->
+	
+	<!-- div class="col-md-1">
+		<p>-timeline of all devices-</p>
+	</div-->
+</div>
+

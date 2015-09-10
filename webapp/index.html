@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hubble</title>
+    <link rel="stylesheet"
+      href="css/layout.css?XXX"
+      type="text/css"
+      media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700|Open+Sans:400italic,600italic,700italic,700,600,400'
+      rel='stylesheet'
+      type='text/css' />
+  </head>
+  <body>
+    <div class="main-content">
+      <div id="header-wrapper">
+        <div id="header-row" class="container">
+          <div class="row">
+            <div class="col-md-12" id="header"></div>
+          </div>
+        </div>
+      </div>
+      <div id="content_row">
+        <div id="page_view"></div>
+        <div id="loader">
+          <img src="images/bubble_loader.svg" alt="loading"/>
+        </div>
+      </div>
+      <div id="footer_container">
+        <div class="text-center" id="footer">
+          <div id="footer_inner" class="clearfix">
+            <span class="footer-left-links pull-left">Version 2.2.8</span>
+            <span class="footer-right-links pull-right">
+              <a href="http://hubbleconnected.com" target="_blank">Hubble Store</a> |
+              <a href="https://hubble.zendesk.com" target="_blank">Support</a> |
+              <a href="http://hubbleconnected.com/terms-of-service/" target="_blank">Terms of Service</a> |
+              Copyright Hubble
+              <script language="JavaScript" type="text/javascript">
+                now = new Date
+                theYear=now.getYear()
+                if (theYear < 1900)
+                theYear=theYear+1900
+                document.write(theYear)
+              </script>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="api_loading_dlg" class="modal fade" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div id="api-loading" class="text-center">
+              <span class="glyphicon glyphicon-cloud-download"></span>
+              <span id="api-loading-message">
+                <%= lang.t('loading_message') %>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="logout_overlay" class="modal fade" aria-hidden="true"></div>
+    <div id="page_content"></div>
+    <script type="text/javascript">
+      (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+      mixpanel.init("5cead5fc05b817fd6815c69fb8c25f9d");
+    </script>
+    <script src="js/lib/require.js"></script>
+    <script src="js/main.js?XXX"></script>
+    <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+    <style type="text/css" media="screen, projection">
+      @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+    </style>
+    <script type="text/javascript">
+      if (typeof(Zenbox) !== "undefined") {
+        Zenbox.init({
+          dropboxID:   "20171974",
+          url:         "https://hubble.zendesk.com",
+          tabTooltip:  "Feedback",
+          tabImageURL: "https://p2.zdassets.com/external/zenbox/images/tab_feedback_right.png",
+          tabColor:    "#ffb640",
+          tabPosition: "Right"
+        });
+      }
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-55186463-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

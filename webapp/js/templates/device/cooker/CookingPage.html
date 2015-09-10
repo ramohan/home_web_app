@@ -1,0 +1,57 @@
+
+<h3><%= device.get('name') %> - Cooking</h3>
+
+<div class="row">
+
+	<div class="col-xs-5 col-md-3">
+	<div class="btn-group-vertical pull-right recipe-quicklist">
+		<!-- button type="button" data-recipe-name="Quick Cook" data-recipe-id="1"
+		 data-program-code="13" class="btn btn-default select_program">Quick</button -->
+		<button type="button" data-recipe-name="Yogurt" data-recipe-id="6"
+		 data-program-code="4" class="btn btn-default select_program">Yogurt</button>
+		<button type="button" data-recipe-name="Fry - Meat" data-recipe-id="11"
+		 data-program-code="7" class="btn btn-default select_program">Fry (Meat)</button>
+		<button type="button" data-recipe-name="Slow Cook - Meat" data-recipe-id="14"
+		 data-program-code="8" class="btn btn-default select_program">Slow (Meat)</button>
+	</div>
+
+	</div>
+
+	<div class="col-md-9">
+	
+		<div class="row cook_spinner_row">
+			<div class="col-md-2">
+			</div>
+			<div class="col-xs-10 col-md-7 cooker_countdown">
+				<div id="countdown">Sending commands to cooker...</div>
+			
+			</div>
+		
+		</div>
+	
+		<div class="row start_button_row">
+			<div class="col-md-8">
+				<button id="stop_cooking" 
+				class="btn btn-primary btn-lg btn-cookbutton center-block">Stop</button>
+			</div>
+		</div>
+	</div>
+	
+	
+
+</div>
+
+<div class="row">
+	<div class="col-md-11">
+		<!-- div id="events_timeline">
+		Timeline
+		</div -->
+	
+	</div>
+
+</div>
+
+
+
+
+

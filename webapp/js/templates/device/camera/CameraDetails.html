@@ -1,0 +1,373 @@
+
+<div id="slidey_drawer_transparency_container">
+	<div id="slidey_drawer_transparency"></div>
+</div>
+
+
+<div id="camera_details_tabs_container" class="container">
+<div class="row" id="camera_details_tabs">
+	<div class="col-md-12">
+
+		<div class="tab-content <%= device.get('is_available') ? '' : 'cam-offline' %>" id="camera_details_tabcontents">
+
+
+			<div class="tab-pane" id="device_minilist_tab">
+				<div id="mini_device_list"></div>
+
+			</div><!-- end sharing .tab-pane -->
+
+			<div class="tab-pane" id="controls">
+
+				<div class="row camcontrols-row">
+
+					<div class="camcontrols-notifications-col">
+					<!-- begin notifications column -->
+
+						<div class="row">
+							<div class="col-md-12">
+								<span class="devicecontrols-section-label">
+						<%= lang.t('camdetails_sectionlabel_notifications') %>
+								</span>
+
+								<div class="row toggles-row">
+									<div class="clearfix motion">
+										<span class="toggles-label">
+										<%= lang.t('camdetails_motionevents') %>
+										</span>
+										
+										<span id="motion_icon"></span>
+
+										<span class="set-motion-sens"
+										title="<%= lang.t('sens_setting_low') %>"
+										data-value="low" id="motion_sens_low">
+										</span>
+										<span class="set-motion-sens"
+										title="<%= lang.t('sens_setting_medium') %>"
+										data-value="medium" 
+										id="motion_sens_medium"></span>
+										<span class="set-motion-sens"
+										title="<%= lang.t('sens_setting_high') %>"
+										data-value="high" id="motion_sens_high">
+										</span>
+									</div>
+									<div class="clearfix motion-toggle">
+										<div class="slider-frame motion-toggle">
+											<span class="slider-button"></span>
+										</div>
+
+									</div>
+
+								</div><!-- motion events row -->
+
+								<div class="row toggles-row">
+									<div class="clearfix sound">
+										<span class="toggles-label">
+										<%= lang.t('camdetails_soundevents') %>
+										</span>
+										<span id="sound_icon"></span>
+
+										<span class="set-sound-sens"
+										title="<%= lang.t('sens_setting_low') %>"
+										data-value="low" id="sound_sens_low">
+										</span>
+										<span class="set-sound-sens"
+										title="<%= lang.t('sens_setting_medium') %>"
+										data-value="medium" 
+										id="sound_sens_medium"></span>
+										<span class="set-sound-sens"
+										title="<%= lang.t('sens_setting_high') %>"
+										data-value="high" id="sound_sens_high">
+										</span>
+									</div>
+									<div class="clearfix sound-toggle">
+										<div class="slider-frame sound-toggle">
+											<span class="slider-button"></span>
+										</div>
+
+									</div>
+
+								</div><!-- sound events row -->
+
+
+							</div>
+						</div><!-- end sub row for motion/sound detection -->
+
+
+
+						<div class="row"><!-- temperature row -->
+							<div class="col-md-6 temp-display-col clearfix">
+								<span id="low-temp-decrease"></span>
+								<span class="temp-setting-display low-temp">
+									<span id="low-temp-display"></span>
+									<span class="degree-symbol">°</span>
+									<span class="degree-char"></span>
+								</span>
+								<span id="low-temp-increase"></span>
+							</div>
+							<div class="col-md-6 temp-display-col clearfix">
+								<span id="high-temp-decrease"></span>
+								<span class="temp-setting-display high-temp">
+									<span id="high-temp-display"></span>
+									<span class="degree-symbol">°</span>
+									<span class="degree-char"></span>
+								</span>
+								<span id="high-temp-increase"></span>
+
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="temp-toggles-col">
+								<div class="slider-frame low-temp-toggle">
+									<span class="slider-button"></span>
+								</div>
+							</div>
+							<div class="temp-toggles-col">
+								<div class="slider-frame high-temp-toggle">
+									<span class="slider-button"></span>
+								</div>
+
+							</div>
+
+
+						</div><!-- end temperature row -->
+
+
+					</div><!-- end notifications column -->
+
+
+					<div class="camcontrols-preferences-col">
+					<!-- "Preferences" column -->
+
+
+						<div class="row tempform-row">
+							<div class="col-md-12">
+								<span class="devicecontrols-section-label">
+						<%= lang.t('camdetails_sectionlabel_preferences') %>
+								</span>
+							<span class="temp-format-buttons">
+								<div class="temp-format-celsius set-temp-format"
+									data-format="celsius">°C</div>
+
+								<div class="temp-format-fahrenheit set-temp-format"
+									data-format="fahrenheit">°F</div>
+							</span>
+
+							</div>
+						</div>
+
+
+						<div class="row volume-row">
+							<div class="col-md-12">
+								<span class="volume-low-icon"></span>
+								<span id="cam_volume"></span>
+								<span class="volume-high-icon"></span>
+							</div>
+						</div>
+
+
+
+						<div class="row togglequality-row">
+							<div class="col-md-12">
+								<button class="btn btn-default toggle-high-quality" 
+								data-toggle="tooltip" data-placement="bottom"
+								title="<%= lang.t('camdetails_bitrate_button_tooltip') %>"
+								disabled="disabled">
+									<%= lang.t('camdetails_lowerqualitybutton') %>
+								</button>
+
+							</div>
+						</div>
+
+
+					</div><!-- end "Camera" column -->
+
+
+
+
+					<div class="col-md-4 camcontrols-sounds-col"><!-- sounds column -->
+						<span class="devicecontrols-section-label">
+							<%= lang.t('camdetails_sectionlabel_sounds') %>
+						</span>
+
+						<div id="cam_melody">
+
+							<div class="play-sound">
+								<span class="tune-icon tune-icon-1"></span>
+								<span data-song="1" class="play-melody">
+								Rock a Bye, Baby
+								</span>
+							</div>
+
+							<div class="play-sound">
+								<span class="tune-icon tune-icon-2"></span>
+								<span data-song="2" class="play-melody">
+								Lullabye and Goodnight
+								</span>
+							</div>
+
+							<div class="play-sound">
+								<span class="tune-icon tune-icon-3"></span>
+								<span data-song="3" class="play-melody">
+								Lavender Blue
+								</span>
+							</div>
+
+							<div class="play-sound">
+								<span class="tune-icon tune-icon-4"></span>
+								<span data-song="4" class="play-melody">
+								Twinkle Twinkle Little Star
+								</span>
+							</div>
+
+							<div class="play-sound">
+								<span class="tune-icon tune-icon-5"></span>
+								<span data-song="5" class="play-melody">
+								Hush Little Baby								
+								</span>
+							</div>
+						</div>
+
+
+
+					</div><!-- end sounds column -->
+
+
+
+
+				</div><!-- end pan/sounds/settings row -->
+
+
+				
+
+			</div><!-- end cam controls tab pane -->
+
+			<div class="tab-pane" id="devicetimeline">
+				<div id="timeline_container">
+					<div id="events_timeline"></div>
+				</div>
+			</div><!-- end timeline .tab-pane -->
+
+			<!--
+			<div class="tab-pane" id="savedclips">
+
+			</div>
+			-->
+			<!-- end savedclips .tab-pane -->
+
+			<div class="tab-pane" id="sharing">
+<!-- label for="send_share_invitation">Invite people to use your devices</label>
+<input type="text" name="send_share_invitation" size="30">
+<input type="button" class="btn btn-default invite-humans" value="<%= lang.t('camdetails_sendinvite_button') %>">
+<span class="sharing-feedback"></span -->
+
+
+<div id="access_log"></div>
+
+
+			</div><!-- end sharing .tab-pane -->
+
+		</div><!-- end cam controls .tab-content tab -->
+
+	</div><!-- end cam nav column -->
+</div><!-- end cam nav row -->
+
+
+
+
+
+<div class="row">
+	<div id="viewport-col" class="col-md-12 viewport-container <%= device.get('is_available') ? '' : 'cam-offline' %>">
+
+
+		<div id="temperature-container">
+
+
+			<span class="label-temp-wrapper clearfix">
+
+				<span class="temp-display-circle">
+					<span class="temperature-display">
+						<span id="current-temperature"></span>
+						<span class="degree-symbol-container">
+							<span class="main-degrees-symbol">°</span>
+						</span>
+						<span class="degree-char"></span>
+					</span>
+				</span>
+
+				<span class="camera-name">
+					<%= device.get('name') %>
+				</span>
+
+			</span>
+		</div>
+
+
+		<div id="viewport_transparency_container">
+			<div id="viewport_transparent_layer" class="transparent"></div>
+		</div>
+
+
+		<div id="viewport_container_container">
+		<div id="viewport_container">
+
+			<div id="viewport" class="viewport-hidden">
+				<p><%= lang.t('camdetails_cameranotavailable') %></p>
+
+				<% if (device.get('snaps_url').indexOf('hubble.png') < 0) { %>
+				<p><img src="<%= device.get('snaps_url') %>"
+					width="<%= cfg.get('VIDEO_LARGE_WIDTH') %>" 
+					height="<%= device.getHeightFromWidth(cfg.get('VIDEO_LARGE_WIDTH')) %>"
+					alt="Camera snapshot" />
+				<% } %>
+			</div>
+
+			<span id="controls-toggle-container">
+				<span id="controls-toggle-button"></span>
+			</span>
+
+			<div id="camcontrols">
+
+				<div class="camctrl pan-leftright">
+					<span id="pan-controls">
+						<span class="cam-pan-left-icon cam-pan"
+							data-pan-dir="left"></span>
+						<span class="cam-pan-leftright-icon"></span>
+						<span class="cam-pan-right-icon cam-pan"
+							data-pan-dir="right"></span>
+					</span>
+
+				</div>
+
+				<div class="camctrl pan-updown">
+					<span id="tilt-controls">
+						<span class="cam-pan-up-icon cam-pan"
+							data-pan-dir="up"></span>
+						<span class="cam-pan-updown-icon"></span>
+						<span class="cam-pan-down-icon cam-pan"
+							data-pan-dir="down"></span>
+					</span>
+
+				</div>
+
+				<div class="camctrl brightness">
+					<span id="bright_low_icon"></span>
+					<span id="cam_brightness"></span>
+					<span id="bright_high_icon"></span>
+				</div>
+
+			</div>
+
+			<div id="player-stopped-container">
+				<span id="player-stopped-message"></span>
+			</div>
+
+		</div><!-- end #viewport-container -->
+		</div><!-- end #viewport-container-container -->
+	</div><!-- end .viewport-container (confusing, I know) -->
+</div><!-- end .row #camera_details_tabs -->
+</div><!-- end #camera_details_tabs_container -->
+
+
+
+

@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="row">
+
+		<form role="form" class="register-form col-md-10 col-md-offset-1">
+			<div class="common-form" id="registration_form">
+
+				<h2 class="plan-title"><%= lang.t('regform_title') %></h2>
+
+				<div class="form-group">
+
+					<div id="registration_info"><p></p></div>
+
+					<div class="form-body">
+						<span class="form-errors name-errors"></span>
+						<label for="name"><%= lang.t('regform_name') %></label>
+						<input class="form-control" type="text" name="name">
+
+
+						<span class="form-errors email-errors"></span>
+						<label for="email"><%= lang.t('regform_email') %></label>
+						<input class="form-control" type="text" name="email">
+					
+						<span class="form-errors password-errors"></span>
+						<label for="password"><%= lang.t('regform_password') %></label>
+						<input class="form-control" type="password" name="password">
+					
+						<span class="form-errors password_confirmation-errors"></span>
+						<label for="password_confirmation">
+							<%= lang.t('regform_password_confirmation') %>
+						</label>
+						<input class="form-control" type="password" name="password_confirmation">
+					
+						<div class="btn-wrapper">
+							<button type="submit" class="complete-reg submit_reg btn btn-primary">
+								<%= lang.t('regform_submit') %>
+							</button>
+						
+							<button type="reset" class="btn btn-default">
+								<%= lang.t('regform_reset') %>
+							</button>
+						</div>
+
+						<div class="regform-signin"><%= lang.t('regform_signin') %></div>
+					</div>
+
+
+				</div>
+			</div>
+		</form>
+
+	</div>
+</div>

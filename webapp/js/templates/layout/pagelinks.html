@@ -1,0 +1,21 @@
+
+
+<ul class="pagination">
+	<% if (current_page > (max_pagelinks+1)) { %>
+		<li><a href="#" data-pageno="1" class="pagelinks-first">&laquo;</a></li>
+	<% } %>
+
+<% _.each(pages, function(val, idx, pages) { 
+	var min = current_page - max_pagelinks;
+	var max = current_page + max_pagelinks;
+	if (val >= min && val <= max) { %>
+	<li><a href="#" class="setpage" data-pageno="<%= val %>"><%= val %></a></li>
+<% 	}
+});  %>
+
+	<% if (current_page < (last_page - max_pagelinks)) { %>
+		<li><a href="#" data-pageno="<%= last_page %>" 
+		class="pagelinks-last">&raquo;</a></li>
+	<% } %>
+</ul>
+

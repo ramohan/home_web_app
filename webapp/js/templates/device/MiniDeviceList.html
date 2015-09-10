@@ -1,0 +1,33 @@
+
+<div id="mini-device-list-container">
+	<div class="mini-device-list" style="width: <%= width %>px">
+		<% _.each(devices, function(device) { %>
+
+		<div class="mini-device-list-item <%= (device.id == current_device_id) ? 'minidevice-active' : '' %>">
+			<a href="/#device/<%= device.id %>">
+				<% if (device.snapshot.indexOf('hubble.png') > 0) { %>
+				<img class="default-image" src="images/hubble_logo.png" 
+				alt="Thumbnail">
+				<% } else { %>
+				<img class="img-thumb" src="<%= device.snapshot %>" alt="Thumbnail">
+				<% } %>
+			</a>
+
+			<span class="minilist-title">
+				<span class="minilist-camtitle <%= (device.is_available) ? 'available' : 'unavailable' %>">
+					<% if (device.is_available) { %>
+						<span class="available-icon"></span>
+					<% } %>
+					<%= device.name %>
+				</span>
+
+				<span class="available-indicator <%= (device.is_available) ? 'available' : 'unavailable' %>"></span>
+				<span class="available-indicator-text">
+					<%= (device.is_available) ? lang.t('cam_available') : lang.t('cam_unavailable') %>
+				</span>
+			</span>
+		</div>
+		<% }); %>
+	</div>
+</div>
+

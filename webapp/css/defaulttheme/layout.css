@@ -1,0 +1,1635 @@
+
+/**
+Hubble App site CSS
+The older rules are at the top, many of which are left over from previous
+design iterations and may no longer be necessary. After the initial mess,
+subsequent sections are clearly marked:
+-Camera focused layout
+-Main navigation
+-Login page layout
+-Camera section (more specific than the 'camera' page layout)
+-Camera controls and settings (those in the slidey drawer)
+-Camera controls (the ones below the viewport)
+**/
+
+a, a:hover, a:active, a:focus {
+   outline: 0;
+}
+
+div#api-loading {
+	margin-top: 16px;
+}
+div#api-loading > span {
+	font-size: 18pt;
+}
+
+.user-dropdown {
+	list-style-type: none;
+}
+
+#page_title {
+	font-size: 11pt;
+}
+
+#user-stuff {
+	padding-top: 2px;
+	text-align: right;
+}
+
+
+#no_devices {
+	text-align: center;
+}
+
+.logoHolder {margin: 20px 0 0 20px;}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.centeredbuttons {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+	clear: both;
+}
+
+.centeredbuttons input {
+	padding: 4px 14px 4px 14px;
+	margin: 4px;
+	float: none;
+}
+
+.login-form input[type="checkbox"] {
+	clear: none;
+	margin-left: 8px;
+}
+
+.sharing-container {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sharing-container ul {
+	margin-bottom: 34px;
+}
+
+/* common form styles */
+.common-form {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ededed;
+	padding: 30px 0;
+}
+
+.common-form .popinfo {
+	margin-bottom: 20px;
+}
+
+.common-form button {
+	margin-bottom: 25px;
+}
+
+.common-form input {
+	margin-bottom: 18px;
+}
+
+.common-form fieldset {
+	margin: 30px;
+}
+
+.events-before {
+	font-weight: bold;
+	padding: 5px;
+	font-size: 12pt;
+}
+
+
+
+.device_in_grid {
+	margin-right: 20px;
+}
+
+.devicelist-placeholder-image {
+	margin-left: 38px;
+}
+
+
+.gridster li > .device_in_grid {
+}
+
+	.gridster li {
+		display: block;
+		height: 206px;
+		width: 250px;
+		text-align: center;
+		float: left;
+		margin-right: 12px;
+	}
+
+
+#events_timeline, #global_timeline {
+	clear: both;
+}
+
+#camera_details_tabs {
+    margin-bottom: 30px;
+}
+
+div.device_in_grid {
+	float: none;
+}
+
+/* logout */
+
+.user-dropdown .dropdown-menu {
+	min-width: 80px;
+}
+
+#events_timeline .pull-right {
+	margin-top: 19px;
+}
+
+	#events_timeline .pull-right .glyphicon {
+		min-height: 34px;
+		line-height: normal;
+	}
+
+
+.user-dropdown li {
+	font-size: 11pt;
+}
+
+.user-dropdown > li {
+	padding: 4px;
+	display: inline;
+}
+
+/****************************************************
+styles for camera focused layout, (these ones used to be
+prefixed with html.deviceDetails)
+*****************************************************/
+
+html {
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	}
+
+	div.container {
+		background-color: transparent;
+	}
+
+	#titlebar {
+		display: none;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	html {
+		background-color: #e4e4e4;
+	}
+
+	.common-form {
+		background-color: transparent;
+		text-align: left;
+	}
+
+
+
+/****************************************************
+main navigation
+*****************************************************/
+
+
+/****************************************************
+styles for login page layout
+*****************************************************/
+
+
+
+/************************************************
+Camera section
+*************************************************/
+
+.tab-pane {
+	border: none;
+}
+.viewport-container {
+	margin-top: 50px;
+	}
+	#viewport_container_container {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	#viewport_container {
+		margin: 0 auto 180px auto;
+		position: relative;
+		top: 30px;
+		/*left: 30px;*/
+	}
+
+	#viewport_transparency_container {
+		width: 960px;
+		margin: 60px auto;
+	}
+	#viewport_transparent_layer {
+		width: 1020px;
+		height: 604px;
+		background-color: #fff;
+		padding: 20px;
+		position: absolute;
+		left: 50%;
+		margin-left: -510px;
+	}
+
+	#viewport_wrapper {
+		left: 50%;
+		margin-left: -480px;
+	}
+
+.transparent {
+/*
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+*/
+}
+
+
+
+#cam_pan {
+	padding-left: 40px;
+}
+.pan-left-span {
+	width: 45px;
+	height: 90px;
+	display:block;
+	float: left;
+	padding-top: 35px;
+}
+
+.pan-updown-span {
+	width: 45px;
+	height: 90px;
+	display: block;
+	float: left;
+}
+
+.pan-updown-span > button {
+	margin-bottom: 40px;
+}
+.pan-right-span {
+	width: 45px;
+	height: 90px;
+	float: left;
+	display:block;
+	padding-top: 35px;
+}
+
+
+.tab-content > div {
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 8px;
+	border-radius: 0 0 4px 4px;
+}
+
+
+#cam_melody input {
+	margin-bottom: 8px;
+	margin-left: 5px;
+}
+
+
+.timeline_element > .title > .label {
+	color: #666;
+	font-size: 9pt;
+	text-transform: capitalize;
+}
+
+.timeline-videodownload span {
+	color: #556677;
+}
+
+table.camera-access-log {
+	width: 700px;
+}
+
+table.camera-access-log td {
+	padding: 2px;
+}
+
+
+
+#controls, #device_minilist_tab, #timeline, #savedclips, #sharing {
+	border: none;
+}
+
+/* these "slider" classes control the sliding
+toggle buttons */
+.slider-frame {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		width: 70px;
+		height: 36px;
+		-moz-border-radius: 25px;
+		border-radius: 25px;
+	}
+	.slider-button {
+		display: block;
+		width: 36px;
+		height: 36px;
+		line-height: 27px;
+		background: #cc0000;
+		border: 8px solid #EDF2F7;
+		-moz-border-radius: 25px;
+		border-radius: 25px;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.slider-frame.on .slider-button {
+		background-color: #59c800;
+	}
+
+	.slider-frame {
+		background-color: #666;
+		margin-top: 12px;
+	}
+
+	.slider-button.on {
+		margin-left: 40px;
+	}
+
+
+/* these slider classes refer to the
+horizontal sliders used to select an integer
+value */
+.ui-slider-horizontal {
+	}
+	.toggles-label {
+		display: block;
+		text-align: left;
+	}
+
+	.ui-slider {
+		display: block;
+		background-color: #aaa !important;
+		border: none;
+		height: 4px !important;
+	}
+
+	.ui-slider-handle {
+		margin-top: -2px;
+		border: 2px solid #aaa;
+		-moz-border-radius: 25px;
+		border-radius: 25px;
+	}
+
+	.ui-slider-range-min {
+		background-color: #aaa !important;
+	}
+
+	#cam_pan button {
+		-moz-border-radius: 70px;
+		border-radius: 70px;
+	}
+
+	#sharing {
+		height: 265px;
+		overflow: auto;
+	}
+
+	ul.nav-tabs li.active a,ul.nav-tabs li.active a:hover {
+		border: 0;
+	}
+
+#camera_details_tabcontents {
+	height: 300px;
+	margin-bottom: 50px;
+}
+
+#pagelink_container {
+		width: 2300px;
+		height: 50px;
+		margin: 0;
+	}
+
+	html.deviceDetails ul.pagination {
+		margin: 0;
+		width: 100%;
+		height: 56px;
+		position: relative;
+		top: -6px;
+		padding-left: 10px;
+	}
+
+	html.deviceDetails ul.pagination li {
+	}
+
+	html.deviceDetails ul.pagination li a {
+		border: 2px solid #a2a2a2;
+		-moz-border-radius: 35px;
+		border-radius: 35px;
+		color: #555;
+		background-color: transparent;
+		font-size: 12pt;
+		margin: 10px 5px 0 5px;
+		padding: 5px 2px 0 0;
+		width: 40px;
+		height: 40px;
+		line-height: 26px;
+		text-align: center;
+	}
+
+	html.deviceDetails ul.pagination .pagelinks-first,
+	html.deviceDetails ul.pagination .pagelinks-last {
+		border: 0;
+		text-indent: -1000em;
+		background-size: 52px 52px;
+		background-position: center center;
+	}
+
+	html.deviceDetails ul.pagination .pagelinks-first {
+		background-image: url('/images/icons/panLeftInactive.svg');
+	}
+
+	html.deviceDetails ul.pagination .pagelinks-last {
+		background-image: url('/images/icons/panRightInactive.svg');
+	}
+
+	html.deviceDetails ul.pagination li.active a {
+		background-color: #00adf7;
+		color: #fff;
+		border: 2px solid #00adf7;
+	}
+
+	html.deviceDetails ul.pagination li.active a:hover {
+		background-color: #10bdff;
+		border: 2px solid #10bdff;
+	}
+
+	html.deviceDetails ul.pagination li a:hover {
+		background-color: #eee;
+	}
+
+	#content_row {
+		background-color: #e4e4e4;
+	}
+
+	#footer {
+		background-color: #444;
+	}
+
+#timeline {
+		height: 265px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	#timeline_container {
+		width: 100%;
+		overflow: auto;
+		overflow-y: hidden;
+	}
+
+	.camera-timeline {
+		width: 2300px;
+		list-style-type: none;
+	}
+
+	.camera-timeline li {
+		display: inline;
+	}
+
+	.timeline-videodownload {
+		margin-top: -2px;
+	}
+
+	div#timeline.tab-pane.active {
+		padding: 0;
+	}
+
+	#camera_details_tabs.row {
+		margin: 0;
+	}
+
+	.device-timeline-item {
+		display: block;
+		width: 308px;
+		height: 200px;
+		float: left;
+		border: 1px solid #888;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.device-timeline-item > div > img {
+		width: 307px;
+	}
+
+	.play-button-wrapper {
+		position: relative;
+		width: 302px;
+	}
+
+	.play-button {
+		position: absolute;
+		margin: 38px 104px !important;
+		background: url('/images/icons/playVideoArrow.svg') center center no-repeat;
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		background-size: 80px 80px;
+	}
+
+	.camera-timeline li > div > span {
+		font-weight: bold;
+		color: #888;
+		background-color: #fff;
+		display: block;
+		height: 25px;
+		font-size: 12pt;
+	}
+	.camera-timeline li > div > span a {
+		color: #777;
+	}
+
+	.temperature-event, .sound-event {
+		width: 305px;
+		height: 172px;
+		background-color: #fff;
+		display: block;
+		padding-top: 40px;
+	}
+
+	.sound-event {
+		background-image: url('/images/icons/audioInIcon.svg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100px 100px;
+	}
+
+	.temperature-box {
+		width: 100px;
+		height: 100px;
+		display: block;
+		background-color: #01adf7;
+		padding-top: 28px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+		float: left;
+		text-align: center;
+	}
+
+	.temp-notice-display {
+		color: #fff;
+		font-size: 22pt;
+		font-weight: bold;
+	}
+
+	.temp-event-wrapper {
+		width: 180px;
+		margin: 0 auto;
+		display: block;
+		height: 100px;
+	}
+
+	.temperature-icon-high, .temperature-icon-low {
+		float: left;
+		width: 60px;
+		height: 60px;
+		display: block;
+		background-image: url('/images/icons/tempUpInactive.svg');
+		background-size: 50px 50px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		margin: 20px 0 0 20px;
+	}
+
+	.temperature-icon-low {
+		background-image: url('/images/icons/tempDownInactive.svg');
+	}
+
+	.camera-timeline li > div > img {
+		width: 302px;
+		height: 170px;
+	}
+
+#camera_details_tabs_container {
+	width: 100%;
+}
+#camera_details_tabs_container.controls > div.row {
+	/*width: 1230px;*/
+	margin: 30px auto 0 auto;
+}
+#camera_details_tabs {
+	display: none;
+	height: 300px;
+	color: #fff;
+}
+
+/* these "slidey" classes control the content
+drawer which contains controls, timeline, etc */
+#slidey_drawer_transparency_container {
+}
+
+#slidey_drawer_transparency {
+	position: absolute;
+	background-color: #fbfbfb;
+	width: 100%;
+	height: 300px;
+	zoom: 1;
+	display: none;
+border-top: 1px solid #ededed;
+}
+
+
+#player-stopped-container {
+	clear: both;
+	width: 100%;
+	}
+
+	#player-stopped-container > span {
+		text-align: center;
+		display: block !important;
+		position: relative;
+		top: -400px;
+		width: 400px;
+		height: 100px;
+		line-height: 90px;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+
+
+/****************************************************
+camera controls and settings (those in the slidey drawer)
+*****************************************************/
+div#controls {
+		margin: 0 auto;
+		width: 1040px;
+		color: #848484;
+	}
+	div#controls .camcontrols-row {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	div#controls div {
+	}
+	div#controls .camcontrols-notifications-col {
+		width: 440px;
+		float: left;
+	}
+	.camcontrols-notifications-col .ui-slider {
+		width: 160px !important;
+	}
+	div#controls .camcontrols-preferences-col {
+		padding-left: 30px;
+		padding-right: 30px;
+		width: 245px;
+		float: left;
+	}
+	div#controls .camcontrols-preferences-col .devicecontrols-section-label {
+		float: left;
+	}
+	.temp-format-buttons {
+		clear: left;
+		padding-top: 10px;
+		display: block;
+	}
+	div#controls .camcontrols-sounds-col  {
+		text-align: left;
+		width: 295px;
+	}
+	.temp-display-col {
+		width: 216px !important;
+		padding-top: 20px;
+	}
+	.temp-display-col span {
+		float: left;
+	}
+	.temp-toggles-col {
+		position: relative;
+		left: -30px;
+	}
+	.motion-toggle, .sound-toggle {
+		float: left;
+		position: relative;
+		left: -30px;
+		top: 10px;
+	}
+
+	#camera_details_tabs_container.controls {
+		margin-top: -30px;
+	}
+
+	.toggles-row {
+		margin-bottom: 0;
+	}
+
+	.toggles-row .motion, .toggle-row .motion-toggle,
+	.toggles-row .sound, .toggles-row .sound-toggle {
+		width: auto;
+		float: left;
+	}
+
+	.toggles-row .motion,
+	.toggles-row .sound {
+		margin-right: 45px;
+		margin-left: 25px;
+	}
+
+	.toggles-row .motion-toggle,
+	.toggles-row .sound-toggle {
+		left: 0;
+		top: 3px;
+	}
+
+	.set-temp-format {
+		height: 60px;
+		width: 60px;
+		float: left;
+		margin-left: 30px;
+		background-color: #aaa;
+		line-height: 64px;
+		font-weight: bold;
+		font-size: 18pt;
+		border-radius: 30px;
+		-moz-border-radius: 30px;
+		color: #fbfbfb;
+		padding-right: 9px;
+		text-align: center;
+	}
+
+	.set-temp-format.active {
+		background-color: #59c800;
+	}
+
+	#low-temp-increase, #low-temp-decrease,
+	#high-temp-increase, #high-temp-decrease {
+		display: block;
+		width: 50px;
+		height: 50px;
+		margin-top: 14px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
+	#low-temp-decrease, #high-temp-decrease {
+		background-image: url('/images/icons/tiltDownInactive.svg');
+	}
+
+	#low-temp-increase, #high-temp-increase {
+		background-image: url('/images/icons/tiltUpInactive.svg');
+	}
+
+
+	#low-temp-decrease:hover, #high-temp-decrease:hover {
+		background-image: url('/images/icons/tiltDownActive.svg');
+	}
+
+	#low-temp-increase:hover, #high-temp-increase:hover {
+		background-image: url('/images/icons/tiltUpActive.svg');
+	}
+
+	.temp-setting-display {
+		display: block;
+		width: 70px;
+		height: 70px;
+		border-radius: 50px;
+		-moz-border-radius: 50px;
+		font-weight: bold;
+		font-size: 16pt !important;
+		color: #515151;
+		padding-top: 19px;
+		margin-right: 0;
+		padding-left: 7px;
+	}
+
+	.temp-setting-display.low-temp {
+		border: 2px solid #2299ff;
+	}
+
+	.temp-setting-display.high-temp {
+		border: 2px solid #cc0000;
+	}
+
+	#high-temp-display, #low-temp-display {
+		font-size: 16pt;
+		width: auto;
+	}
+
+	#high-temp-display {
+		margin-left: 2px;
+	}
+
+	.temp-setting-display .degree-char {
+		margin-left: -1px;
+	}
+
+	.high-temp-toggle {
+		position: relative;
+		left: -20px;
+	}
+
+	.temp-setting-display .degree-symbol {
+		margin-left: -1px;
+		font-weight: bold;
+	}
+
+	/* hiding the labels for motion and sound events */
+	.toggles-label {
+		display: none;
+	}
+
+	#motion_icon, #sound_icon {
+		display: block;
+		width: 40px;
+		height: 40px;
+		float: left;
+		background-position: center center;
+		background-repeat: no-repeat;
+		margin-right: 26px;
+		margin-top: 20px;
+	}
+
+	#motion_icon {
+		background-image: url('/images/icons/motionIcon.svg');
+	}
+
+	#sound_icon {
+		background-image: url('/images/icons/audioInIcon.svg');
+	}
+
+	.set-motion-sens, .set-sound-sens {
+		width: 40px;
+		height: 40px;
+		display: block;
+		float: left;
+		margin-top: 20px;
+		margin-left: 14px;
+		margin-right: 14px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+		background-color: #aaa;
+	}
+
+	.set-motion-sens.active, .set-sound-sens.active {
+		background-color: #59c800;
+	}
+
+
+	.set-temp-format:hover,
+	.set-motion-sens:hover, .set-sound-sens:hover {
+		background-color: #a3cf00;
+		cursor: pointer;
+	}
+
+	.toggle-is-off {
+		background-color: #aaa !important;
+	}
+
+	#motion_sens_low, #sound_sens_low {
+		width: 20px;
+		height: 20px;
+		margin-top: 32px;
+	}
+	#sound_sens_low {
+		margin-top: 30px;
+	}
+
+	#motion_sens_medium, #sound_sens_medium {
+		width: 30px;
+		height: 30px;
+		margin-top: 25px;
+	}
+
+	#motion_sens_slider, #sound_sens_slider {
+		float: left;
+		width: 210px;
+	}
+
+	.volume-low-icon, .volume-high-icon {
+		float: left;
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-image: url('/images/icons/audioOutSmallIcon.svg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 40px 40px;
+	}
+
+	.volume-high-icon {
+		margin-left: 10px;
+		background-image: url('/images/icons/audioOutLargeIcon.svg');
+	}
+
+	#cam_volume {
+		float: left;
+		display: block;
+		width: 130px;
+		height: 20px;
+	}
+
+	.volume-low-icon,
+	.volume-high-icon {
+		cursor: pointer;
+	}
+
+	.tempform-row > div > span {
+		margin-bottom: 8px;
+	}
+
+	.tempform-row, .volume-row, .togglequality-row {
+		margin-bottom: 20px;
+	}
+
+	.devicecontrols-section-label {
+		font-weight: bold;
+	}
+
+	.toggle-high-quality {
+		margin-top: 8px;
+		font-weight: bold;
+	}
+
+	.play-sound {
+		clear: both;
+	}
+
+div#cam_melody {
+		padding-top: 14px;
+	}
+
+	.play-sound span.tune-icon {
+		display: none !important;
+		width: 40px;
+		height: 40px;
+		display: block;
+		float: left;
+		background-image: url('/images/icons/tuneInactive.svg');
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	.play-sound span.tune-icon.active {
+		background-image: url('/images/icons/tuneActive.svg');
+	}
+
+
+	.play-melody:hover {
+		cursor: pointer;
+		background-image: url('/images/icons/tuneInteractive.svg');
+	}
+
+	.play-melody {
+		float: left;
+		width: 240px;
+		height: 46px;
+		padding-left: 40px !important;
+		padding-top: 8px;
+		margin-bottom: 0 !important;
+		margin-top: 0 !important;
+		font-weight: bold;
+		background-color: transparent;
+		border: none;
+		text-align: left;
+		padding-left: 0;
+		margin-top: 10px;
+		background-image: url('/images/icons/tuneInactive.svg');
+		background-position: 0px 4px;
+		background-repeat: no-repeat;
+	}
+
+	.play-melody.active {
+		color: #00adf7;
+		background-image: url('/images/icons/tuneActive.svg');
+	}
+
+/*** camera switcher ***/
+
+
+#mini_device_list {
+		height: 280px;
+		overflow: auto;
+		overflow-y: hidden;
+	}
+
+	.mini-device-list .mini-device-list-item {
+		text-align: center;
+	}
+
+	.mini-device-list-item {
+		width: 307px;
+	}
+
+	.minilist-camtitle {
+		font-size: 18pt;
+		height: 40px;
+		display: block;
+		width: 100%;
+		color: #777;
+		float: left;
+		text-align: left;
+		overflow: hidden;
+		padding-top: 5px;
+		padding-left: 3px;
+	}
+
+.minilist-title {
+		background-color: #fff;
+display: block;
+height: 78px;
+width: 100%;
+}
+
+	.minidevice-active .minilist-camtitle {
+		color: #00adf7;
+	}
+
+	.mini-device-list-item img {
+		width: 305px;
+		height: 172px;
+	}
+
+	.mini-device-list-item img.default-image {
+		width: 192px;
+	}
+
+	.minidevice-active .available-icon {
+		height: 38px;
+		width: 38px;
+		display: inline;
+		float: left;
+		background-image: url('/images/icons/activeCameraIcon.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 28px 28px;
+		margin-top: -4px;
+	}
+
+	.available-indicator-text {
+		font-size: 12pt;
+		display: block;
+		height: 20px;
+		width: 120px;
+		float: left;
+		color: #545454;
+		text-align: left;
+		margin-top: 4px;
+	}
+
+	.mini-device-list-item .available-indicator {
+		margin-left: 8px;
+		margin-top: 4px;
+		margin-right: 8px;
+		float: left;
+		display: block;
+		height: 17px;
+		width: 17px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 16px 16px;
+		background-image: url('/images/icons/cameraOnlineIcon.svg');
+	}
+
+	.available-indicator.unavailable {
+		background-image: url('/images/icons/cameraOfflineIcon.svg');
+	}
+
+	.mini-device-list-item {
+		display: inline;
+		float: left;
+		margin: 10px;
+	}
+
+.temp-display-col {
+	width: 96px;
+	float: left;
+}
+
+.temp-updown-col {
+	width: 60px;
+}
+
+.temp-toggles-col {
+	text-align: center;
+	padding-left: 20px;
+	width: 50%;
+	float: left;
+}
+
+#camera_details_tabs, #camera_details_tabs > div,
+#camera_details_tabcontents, #devicetimeline {
+	margin: 0;
+	padding: 0;
+}
+
+#devicetimeline {
+	border: 0;
+}
+
+/****************************************************
+camera controls (those below the viewport)
+*****************************************************/
+
+
+/* hide things when camera is offline */
+#viewport-col.cam-offline .camctrl {
+		display: none !important;
+	}
+
+	#viewport-col.cam-offline #viewport_transparency_container {
+		display: none;
+	}
+
+	#viewport > p {
+		display: none;
+	}
+
+	#viewport-col.cam-offline #viewport img {
+		display: none;
+	}
+
+	#viewport-col.cam-offline #viewport > p {
+		display: block;
+		margin: 100px auto;
+		font-size: 18pt;
+		text-align: center;
+	}
+
+	#viewport-col.cam-offline .temp-display-circle {
+		display: none;
+	}
+
+	.tab-content.cam-offline .degree-symbol {
+		visibility: hidden;
+	}
+
+	.tab-content.cam-offline .slider-button {
+		display: none;
+	}
+
+	.tab-content.cam-offline .ui-slider-handle {
+		display: none;
+	}
+
+	.tab-content.cam-offline .ui-slider {
+		visibility: hidden;
+	}
+
+	.tab-content.cam-offline #high-temp-increase:hover,
+	.tab-content.cam-offline #low-temp-increase:hover {
+		background-image: url('/images/icons/tiltUpInactive.svg');
+	}
+
+	.tab-content.cam-offline #high-temp-decrease:hover,
+	.tab-content.cam-offline #low-temp-decrease:hover {
+		background-image: url('/images/icons/tiltDownInactive.svg');
+	}
+
+.bright-row > div span {
+	margin-top: 30px;
+}
+
+#player-stopped-container {
+	display: none;
+}
+
+	#cam_brightness, #cam_contrast {
+		width: 220px;
+		height: 40px;
+		float: left;
+		display: block;
+		width: 120px;
+	}
+
+#camera_details_tabcontents .ui-slider-horizontal {
+	margin-top: 20px;
+}
+
+#cam_brightness {
+	position: relative;
+	top: 28px;
+}
+.camcontrols-controls-col, .camcontrols-notifications-col {
+	text-align: left;
+	font-weight: bold;
+}
+
+#temperature-container {
+		display: inline;
+		width: 100%;
+		height: 100px;
+		position: relative;
+		left: -8px;
+	}
+
+	.label-temp-wrapper {
+		margin: 0 auto;
+		position: relative;
+		top: -30px;
+		left: 0px;
+		display: block;
+	}
+
+	.camera-name {
+		float: right;
+		color: #444;
+		font-size: 24pt;
+		font-weight: bold;
+		display: block;
+		padding: 20px 20px 0 0;
+	}
+
+	.temp-display-circle {
+		margin-top: 16px;
+		float: right;
+		background-color: #01adf7;
+		-moz-border-radius: 40px;
+		border-radius: 40px;
+		width: 62px;
+		height: 62px;
+		display: block;
+		font-weight: bold;
+	}
+
+	.degree-char {
+		float: right;
+	}
+
+	.temperature-display {
+		color: #fff;
+		font-size: 16pt;
+		line-height: 70px;
+		padding-left: 6px;
+		padding-right: 0;
+		margin-top: -4px;
+		display: block;
+		width: 56px;
+		text-align: left;
+	}
+
+	.degree-symbol-container {
+		position: absolute;
+	}
+
+	.main-degrees-symbol {
+	}
+
+/** these are the camera controls which display below
+the viewport (still) */
+
+
+#controls-toggle-button {
+	display: block;
+	width: 56px;
+	height: 50px;
+	background: url('/images/icons/cameraControlsInactive.svg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	cursor: pointer;
+	position: absolute;
+	margin-top: 6px;
+	margin-left: -30px;
+	}
+
+	#controls-toggle-button:hover {
+		background-image: url('/images/icons/cameraControlsActive.svg');
+	}
+
+
+	#camcontrols {
+		margin-left: 26px;
+		height: 56px;
+		display: none;
+		overflow: hidden;
+		border-left: 1px solid #e4e4e4;
+	}
+
+	.camctrl {
+		display: block;
+		background-color: #fff;
+		float: left;
+		border-right: 1px solid #e4e4e4;
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+
+	.camctrl .ui-slider {
+		position: relative;
+		top: 27px !important;
+	}
+
+	.camctrl .ui-slider-handle {
+		background-color: #aaa !important;
+		border: 1px solid #aaa !important;
+	}
+
+	.pan-updown span, .pan-leftright span,
+	#bright_low_icon, #bright_high_icon,
+	#contrast_low_icon,	#contrast_high_icon {
+		display: block;
+		width: 56px;
+		height: 56px;
+		float: left;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 40px 40px;
+		border: 0;
+	}
+
+	#pan-controls, #tilt-controls {
+		display: inline;
+		float: none;
+	}
+
+	.cam-pan {
+		cursor: pointer;
+	}
+
+	.ui-slider-handle {
+		cursor: pointer !important;
+	}
+
+	#bright_low_icon, #bright_high_icon {
+		cursor: pointer;
+	}
+
+	.cam-pan-left-icon, .cam-pan-right-icon,
+	.cam-pan-up-icon, .cam-pan-down-icon {
+		background-size: 40px 40px !important;
+	}
+	.cam-pan-left-icon {
+		background-image: url('/images/icons/panLeftInactive.svg');
+	}
+	.cam-pan-left-icon:hover {
+		background-image: url('/images/icons/panLeftActive.svg');
+	}
+	.cam-pan-leftright-icon {
+		background-image: url('/images/icons/pan.svg');
+	}
+	.cam-pan-right-icon {
+		background-image: url('/images/icons/panRightInactive.svg');
+	}
+	.cam-pan-right-icon:hover {
+		background-image: url('/images/icons/panRightActive.svg');
+	}
+	.cam-pan-up-icon {
+		background-image: url('/images/icons/tiltUpInactive.svg');
+	}
+	.cam-pan-up-icon:hover {
+		background-image: url('/images/icons/tiltUpActive.svg');
+	}
+	.cam-pan-updown-icon {
+		background-image: url('/images/icons/tilt.svg');
+	}
+	.cam-pan-down-icon {
+		background-image: url('/images/icons/tiltDownInactive.svg');
+	}
+	.cam-pan-down-icon:hover {
+		background-image: url('/images/icons/tiltDownActive.svg');
+	}
+	#bright_low_icon {
+		background-image: url('/images/icons/brightnessLow.svg');
+		background-position: center 10px;
+	}
+	#bright_high_icon {
+		background-image: url('/images/icons/brightnessHigh.svg');
+		background-position: center 10px;
+	}
+	#contrast_low_icon {
+		background-image: url('/images/icons/brightnessLow.svg');
+	}
+	#contrast_high_icon {
+		background-image: url('/images/icons/brightnessHigh.svg');
+	}
+
+	.cam-pan-leftright-icon {
+		background-position: center 10px !important;
+	}
+
+	.cam-pan-updown-icon {
+		background-position: center 10px !important;
+	}
+
+	.cam-pan {
+		background-position: center 11px !important;
+	}
+
+
+.whitelogo {
+	display: none;
+}
+
+/* zenbox stuff */
+#zenbox_tab {
+	position: absolute !important;
+	background-color: #00adf7 !important;
+	border: 0 !important;
+	top: 390px !important;
+}
+
+
+
+/****************************************************
+Account Management
+*****************************************************/
+
+.account-mgmt-form {
+
+}
+
+.password-extra-info {
+	display: none;
+}
+
+.form-subheader {
+	font-size: 15pt;
+}
+
+.account-mgmt-form span {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.account-mgmt-form label {
+	font-weight: normal;
+}
+
+.account-mgmt-form input {
+	border: 1px solid #888;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	width: 360px;
+}
+
+html.settings #page_view {
+	background-color: #ededed;
+}
+
+.account-mgmt-form label {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.account-mgmt-form button {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	border: 0;
+	width: 100px;
+}
+
+.account-mgmt-form .btn {
+	background-color: #aaa;
+	color: #fff;
+}
+
+.account-mgmt-form .btn-primary {
+	background-color: #40bdff;
+	margin-left: 150px;
+}
+
+
+
+/****************************************************
+Account Management > Choose Function page
+*****************************************************/
+
+.myaccount-page {
+		/*width: 600px;*/
+		/*margin: 0 auto;*/
+	}
+
+	.myaccount-header {
+		float: left;
+		font-weight: bold;
+		font-size: 14pt;
+	}
+
+	.myaccount-page > .myaccount-link-block {
+		clear: left;
+	}
+
+	.myaccount-link-block {
+		width: 100%;
+		display: block;
+		height: 60px;
+		text-align: left;
+		margin: 0px 0 20px 0;
+		border-bottom: 1px solid #E0E0E0;
+	}
+
+	.myaccount-link-block.noplan {
+		margin-bottom: 80px;
+	}
+
+	.myaccount-link-desc {
+		margin: 20px 0 0 20px;
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	.myaccount-link-desc a {
+		color: #515151;
+	}
+
+	.myaccount-go-arrow {
+		float: right;
+/*		margin: 20px;*/
+		cursor: pointer;
+	}
+
+	.shined_up_call_to_action {
+		display: block;
+		background-color: #59C800;
+		height: 70px;
+		width: 96%;
+		color: #fff;
+		border-radius: 8px;
+		-moz-border-radius: 8px;
+		margin: 4px auto;
+	}
+
+	 .shined_up_call_to_action .myaccount-go-arrow {
+		 background-image: url('/images/icons/whiteArrowRight.svg');
+		 background-size: 33px 33px;
+		 background-repeat: no-repeat;
+		 background-position: center center;
+		 margin-top: 15px;
+	 }
+
+	 .myaccount-page .cta_message {
+		 line-height: 70px;
+		 font-weight: bold;
+		 padding-left: 25px;
+	 }
+
+	 .shined_up_call_to_action .myaccount-go-arrow img {
+		 visibility: hidden;
+	 }
+
+
+
+
+
+
+
+/****************************************************
+Account Management > DeviceSubscriptions page
+*****************************************************/
+
+
+
+
+/****************************************************
+Account Management > Purchase Confirmation
+*****************************************************/
+
+
+
+
+
+
+
+
+
+#ToS-Modal .modal-body li {
+  margin-left: 4em;
+}

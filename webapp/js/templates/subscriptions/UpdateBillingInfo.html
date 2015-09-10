@@ -1,0 +1,255 @@
+
+<div class="breadcrumb_container">
+	<div class="container">
+		<div class="row">
+			<div id="breadcrumbs" class="col-md-10 col-md-offset-1"></div>
+		</div>
+	</div>
+</div>
+
+<div class="billinginfo-page update-billing-info container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+
+	<h2 class="plan-title"><%= lang.t('updatebilling_title') %></h2>
+
+<div class="row">
+
+<div class="billing-info-form-container col-md-push-6 col-md-6 col-sm-push-6 col-sm-6">
+	<div class="billing-info-form">
+
+		<div class="form-container clearfix">
+			<div class="subs-pageheader billing-info-header"><%= lang.t('billing_info_header') %></div>
+
+			<div class="errors-container">
+				<div class="api-error"></div>
+			</div>
+
+			<div class="credit-card-section">
+
+				<div class="credit-card-header">
+					</span> <%= lang.t('billing_info_cc_header') %>:
+				</div>
+
+				<label for="cc_name">
+					<%= lang.t('billing_info_cc_name') %>
+				</label>
+				<input type="text" placeholder="First Name" name="cc_first_name">
+				<input type="text" placeholder="Last Name" name="cc_last_name">
+				<div class="validation-error">
+					<div class="cc_name-errors"></div>
+				</div>
+
+				<label for="cc_number">
+					<%= lang.t('billing_info_cc_number') %>
+				</label>
+				<div class="cc_number_wrapper clearfix">
+					<input type="text" name="cc_number">
+					<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+				</div>
+				<div class="validation-error">
+					<div class="cc_number-errors"></div>
+				</div>
+
+				<label for="cc_expiry_date">
+					<%= lang.t('billing_info_cc_expiry_date') %>
+				</label>
+				<input type="text" maxlength="2" name="cc_xp_month" placeholder="MM">
+				<input type="text" maxlength="2" name="cc_xp_year" placeholder="YY">
+				<div class="validation-error">
+					<div class="cc_xp-errors"></div>
+				</div>
+
+				<label for="cc_cvv_number">
+					<%= lang.t('billing_info_cvv_number') %>
+				</label>
+				<div class="cvv_number_wrapper clearfix">
+					<input type="text" name="cvv_number">
+					<button data-toggle="popover" data-trigger="focus" data-content="<%= lang.t('billing_info_cvv_help') %>" tabindex="-1">
+						<span class="glyphicon glyphicon-question-sign"></span>
+					</button>
+				</div>
+				<div class="validation-error">
+					<div class="cvv_number-errors"></div>
+				</div>
+
+
+			</div>
+
+			<div class="section-divider"></div>
+
+			<div class="address-section">
+				<div class="subs-pageheader billing-address-header">
+					<%= lang.t('billing_info_addr_header') %>:
+				</div>
+
+				<label for="addr_line1"><%= lang.t('billing_info_addr_line1') %></label>
+				<input type="text" name="addr_line1">
+				<div class="validation-error">
+					<div class="addr_line1-errors"></div>
+				</div>
+
+				<label for="addr_line2"><%= lang.t('billing_info_addr_line2') %></label>
+				<input type="text" name="addr_line2">
+				<div class="validation-error">
+					<div class="addr_line2-errors"></div>
+				</div>
+
+				<label for="addr_city"><%= lang.t('billing_info_addr_city') %></label>
+				<input type="text" name="addr_city">
+				<div class="validation-error">
+					<div class="addr_city-errors"></div>
+				</div>
+
+				<label for="addr_state"><%= lang.t('billing_info_addr_state') %></label>
+				<input type="text" name="addr_state">
+				<div class="validation-error">
+					<div class="addr_state-errors"></div>
+				</div>
+
+				<label for="addr_country">
+					<%= lang.t('billing_info_addr_country') %>
+				</label>
+				<input type="text" name="addr_country">
+				<div class="validation-error">
+					<div class="addr_country-errors"></div>
+				</div>
+
+				<label for="addr_zip"><%= lang.t('billing_info_addr_zip') %></label>
+				<input type="text" name="addr_zip">
+				<div class="validation-error">
+					<div class="addr_zip-errors"></div>
+				</div>
+				<div class="buttons-section">
+					<button type="submit">Update</button>
+					<!-- <button type="reset"><%= lang.t('billing_info_reset') %></button> -->
+				</div>
+			</div>
+		</div><!-- end .form-container -->
+	</div><!-- /.billing-info-form -->
+</div><!-- /.billing-info-form-container -->
+
+<div class="plan-details-container col-md-pull-6 col-md-6 col-sm-pull-6 col-sm-5">
+	<div class="plan-details-section row">
+		<div class="col-md-9">
+
+			<% if(has_plan == 'active') { %>
+				<div class="subs-pageheader billing-info-header">
+					<%= lang.t('updatebilling_current_plan') %>
+				</div>
+				<div class="plan-box">
+					<div class="box-top-section">
+						<div class="plan-name">
+							<%= lang.t('plans_{0}_title'.format(plan.plan_id)) %>
+						</div>
+					</div>
+					<div class="box-bottom-section">
+						<div class="plan-desc">
+							<%= lang.t('plans_{0}_desc'.format(plan.plan_id)) %>
+						</div>
+						<div class="plan-cost">
+							<% if(annual_plan_available) { %>
+                <span class="plan-dollar"><%=
+                  plan_details.currency.symbol.actual %></span><%= plan_details.price.actual %>
+                <span class="plan-currency"><%=
+                  plan_details.currency.code.actual %></span>
+                <% if (plan_details.currency.code.actual !== plan_details.currency.code.local) { %>
+                  <span class="plan-currency">
+                    Approximately
+                    <%= plan_details.currency.symbol.local %><%= plan_details.price.local %>
+                    <%= plan_details.currency.code.local %>
+                  </span>
+                <% } %>
+							<% } else { %>
+              <span class="plan-dollar"><%= plan.currency.symbol.actual %></span><%=
+                yearly_plan.price.actual %> <%=
+                plan.currency.code.actual %> <span class="per-year"><%= lang.t('billing_info_per_year') %></span>
+                  <% if (plan_details.currency.code.actual !== plan_details.currency.code.local) { %>
+                    <p style="font-size: 50%">
+                      Approximately
+                      <%= plan_details.currency.symbol.local %><%= yearly_plan.price.local %>
+                      <%= plan_details.currency.code.local %>
+                    </p>
+                  <% } %>
+							<% } %>
+							<span class="dev-limit">
+							<%= lang.t('plans_{0}_dev_limit'.format(plan.plan_id)) %>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<% if(annual_plan_available) { %>
+				<div class="plan-box plan-annual">
+					<p class="plan-annual-desc">
+						<%= annual_savings_message %>
+					</p>
+					<div class="plan-cost">
+            <span class="plan-dollar"><%=
+                  plan_details.currency.symbol.actual %></span><%= yearly_plan.price.actual %> <%= plan_details.currency.code.actual %> <span class="per-year"><%= lang.t('billing_info_per_year') %></span>
+            <% if (plan_details.currency.code.actual !== plan_details.currency.code.local) { %>
+              <p style="font-size: 50%">
+                Approximately
+                <%= plan_details.currency.symbol.local %><%= yearly_plan.price.local %>
+                <%= plan_details.currency.code.local %>
+              </p>
+            <% } %>
+					</div>
+					<a class="btn btn-default to-annual" href="">
+						<%= lang.t('billing_info_choose_yearly') %>
+					</a>
+					<div class="apply-yearly-message hidden">
+						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><%= lang.t('billing_info_apply_yearly_msg') %>
+					</div>
+				</div>
+				<% } %>
+
+				<div class="plan-pr-text">
+					<p><%= lang.t('billing_info_plan_p1') %></p>
+
+					<a class="btn btn-default change-plan" href="#subscriptions"><%= lang.t('billing_change_plan') %></a>
+				</div>
+
+			<% } else if(has_plan == 'canceled') { %>
+
+				<div class="subs-pageheader billing-info-header">
+					<%= lang.t('updatebilling_canceled_title') %>
+				</div>
+				<div class="plan-pr-text">
+					<%= lang.t('updatebilling_canceled_message') %>
+
+					<a class="btn btn-default reactivate-plan" href="#subscriptions">
+						<%= lang.t('updatebilling_canceled_reactivate') %>
+					</a>
+				</div>
+
+			<% } else { %>
+
+				<div class="subs-pageheader billing-info-header">
+					<%= lang.t('updatebilling_add_plan') %>
+				</div>
+				<div class="plan-pr-text">
+					<a class="btn btn-default change-plan" href="#subscriptions">
+						<%= lang.t('updatebilling_add_plan_btn') %>
+					</a>
+				</div>
+
+			<% } %>
+		</div>
+	</div>
+</div>
+
+</div><!-- /.row -->
+
+<div class="row">
+	<div class="billing-secure-info col-md-12">
+		<p><span class="glyphicon glyphicon-lock" aria-hidden="true"></span><%= lang.t('billing_info_plan_p2') %></p>
+		<p><%= lang.t('billing_info_plan_p3') %></p>
+	</div>
+</div>
+
+</div><!-- /.col-md-10 -->
+</div><!-- /.row -->
+</div><!-- /.container -->
+
+

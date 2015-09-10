@@ -1,0 +1,105 @@
+<div class="breadcrumb_container">
+	<div class="container">
+		<div class="row">
+			<div id="breadcrumbs" class="col-md-10 col-md-offset-1"></div>
+		</div>
+	</div>
+</div>
+
+
+<form role="form" class="container">
+<div class="account-mgmt-form common-form row">
+	<div class="col-md-10 col-md-offset-1">
+
+		<h2 class="plan-title"><%= lang.t('usersettings_title') %></h2>	
+
+		<div class="popinfo"></div>
+		
+		<div class="form-group current-password">
+			<label for="current_password">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<%= lang.t('usersettings_current_password') %>
+			</label>
+			<input class="form-control" type="password" name="current_password">
+			<div class="form-underlabel password-extra-info">
+				<%= lang.t('usersettings_current_passwordinfo', {
+					password_link_start: '<a href="/#lostpassword">',
+					password_link_end: '</a>'
+				}) %>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+		<!-- fieldset class="settings-email-fieldset" -->
+			<span class="change-email-subheader form-subheader">
+				<%= lang.t('usersettings_email_header') %>
+			</span>
+		
+			<div class="email-errors form-errors"></div>
+			<label for="email"><%= lang.t('usersettings_email') %></label>
+			<input class="form-control" type="text" name="email">
+
+
+			<label for="email_confirm">
+				<%= lang.t('usersettings_email_confirm') %>
+			</label>
+			<input class="form-control" type="text" name="email_confirm">
+
+			<div class="btn-wrapper">
+				<button class="btn btn-primary" type="submit" name="email_submit">
+					<%= lang.t('usersettings_email_submit') %>
+				</button>
+				<button class="btn btn-default" type="submit" name="email_reset">
+					<%= lang.t('usersettings_email_reset') %>
+				</button>
+			</div>
+		<!-- /fieldset -->
+		</div>
+
+
+		<!-- fieldset class="settings-password-fieldset" -->
+		<div class="form-group">
+
+			<span class="change-password-subheader form-subheader">
+				<%= lang.t('usersettings_password_header') %>
+			</span>
+
+			<div class="password-errors form-errors"></div>
+
+			<ul class="password-info">
+				<li>
+					<%= lang.t('usersettings_password_info1') %>
+				</li>
+				<li>
+					<%= lang.t('usersettings_password_info2') %>
+				</li>
+				<li>
+					<%= lang.t('usersettings_password_info3') %>
+				</li>
+			</ul>
+
+			<label for="password"><%= lang.t('usersettings_password') %></label>
+			<input class="form-control" type="password" name="password">
+
+			<label for="password_confirm">
+				<%= lang.t('usersettings_password_confirm') %>
+			</label>
+			<input class="form-control" type="password" name="password_confirm">
+
+			<div class="btn-wrapper">
+				<button class="btn btn-primary" type="submit" 
+				name="password_submit">
+					<%= lang.t('usersettings_password_submit') %>
+				</button>
+				<button class="btn btn-default" type="submit" name="password_reset">
+					<%= lang.t('usersettings_password_reset') %>
+				</button>
+			</div>
+		</div>
+		<!-- /fieldset -->
+
+	</div>
+</div>
+</form>
+

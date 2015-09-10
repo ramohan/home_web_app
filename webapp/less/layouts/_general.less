@@ -1,0 +1,223 @@
+body, html {
+	height: 100%;
+	position: relative;
+}
+
+body {
+	font-size: 16px;
+	color: #515151;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.main-content {
+	min-height: 100%;
+	background: #e4e4e4;
+	position: relative;
+}
+
+#content_row {
+	min-height: 600px;
+	padding-bottom: 67px;
+}
+
+h2 {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+p {
+	line-height: 24px;
+}
+
+div.device_in_grid {
+  display: inline;
+  float: left;
+  padding-right: 25px;
+}
+
+// Shared Button Styling
+.btn.change-plan, .btn.apply-plan, .btn.reactivate-plan {
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	width: 130px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	border: none;
+
+	.lh-border-radius(6px);
+}
+
+.btn.change-plan {
+	background: #59C800;
+}
+
+.btn.apply-plan {
+	background: #00adf7;
+}
+
+// Index Styles
+#content_row {
+	position: relative;
+
+	#page_view {
+		position: relative;
+		z-index: 2;
+		background: #e4e4e4;
+	}
+
+	#loader {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+
+		img {
+			position: absolute;
+			top: 250px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			height: 80px;
+			width: 80px;
+		}
+	}
+}
+
+// Device Details
+.device.api-error, .flash-error {
+	min-height: 800px;
+
+	.error-wrapper {
+		text-align: center;
+		margin-top: 50px;
+		background: #d9534f;
+		.lh-border-radius(5px);
+		padding: 30px;
+		color: #fff;
+	}
+
+	.glyphicon {
+		margin-right: 10px;
+		position: relative;
+		top: 3px;		
+	}
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+}
+
+// Shared Plan box styles
+.plan-name {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20pt;
+	font-weight: bold;
+	display: block;
+	height: auto;
+	padding: 36px 0 30px;
+	border-bottom: 1px solid #bebebe;
+}
+
+.plan-desc {
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 9pt;
+	padding-top: 30px;
+	display: block;
+}
+
+.plan-box {
+	text-align: center;
+	display: block;
+	background: #fff;
+	padding-bottom: 50px;
+	position: relative;
+
+	.lh-transition(all 100ms ease);
+
+	span:not(.plan-dollar) {
+		display: block;
+	}
+
+	.dev-limit {
+		font-size: 10px;
+		margin-top: 10px;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		border: 2px solid #bebebe;
+
+		.lh-opacity(1);
+	}
+
+	.box-bottom-section {
+		position: relative;
+		z-index: 2;
+	}
+
+}
+
+.plan-cost {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 41px;
+	font-weight: 500;
+	line-height: 1;
+	display: inline-block;
+	padding-top: 16px;
+	padding-bottom: 8px;
+
+	.plan-dollar {
+		font-family: 'Ubuntu', sans-serif;
+		font-size: 21px;
+		font-weight: 500;
+		position: relative;
+		top: -13px;
+		margin-right: 5px;
+	}
+
+	.plan-currency {
+		font-size: 13px;
+		color: #ccc;
+		display: block;
+		margin-top: 5px;
+	}
+
+	.per-month {
+		font-size: 18px;
+		line-height: 1;
+		position: relative;
+		font-weight: 500;
+		display: block;
+		margin-top: 5px;
+	}
+}
+
+.plan-error {
+  color: red;
+}
+
+.pending-plan {
+	display: block;
+	margin-top: 55px;
+	background: #F3B017;
+	padding: 20px;
+	color: #fff;
+	text-align: center;
+	.lh-border-radius(5px);
+}

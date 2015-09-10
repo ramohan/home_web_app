@@ -1,0 +1,175 @@
+@myAccountMargin: 20px;
+
+.myaccount-page {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	.myaccount-header {
+		display: block;
+		float: none;
+		text-align: left;
+		margin-left: 0;
+		margin-bottom: 20px;
+		color: #515151;
+	}
+
+	.myaccount-link-block {
+		height: auto;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 40px;
+
+		&.noplan, &.plan, &.update-plan {
+			//display: none;
+		}
+
+		&.noplan {
+			margin-bottom: 20px;
+		}
+
+		&:last-child {
+			border: none;
+		}
+
+		a {
+			color: #515151;
+
+			path {
+				.lh-transition(all 100ms ease);
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: #000;
+
+				path {
+					fill: #515151;
+				}
+			}
+		}
+	}
+
+	.glyphicon {
+		position: relative;
+		top: 5px;
+		margin-right: 10px;
+		font-size: 24px;
+		display: inline-block;
+		float: left;
+	}
+
+	.desc {
+		position: relative;
+		top: 5px;
+		display: inline;
+	}
+
+	.myaccount-link-desc {
+		font-weight: 500;
+		margin-left: 0;
+
+		&.plan-info {
+			width: 100%;
+			
+			.col1, .col2 {
+				width: 50%;
+				float: left;
+			}
+
+			.pending-plan {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	.myaccount-go-arrow {
+		margin-right: -5px;
+		margin-top: 10px;
+
+		svg {
+			float: right;
+		}
+	}
+
+	.myaccount-link-block {
+
+		&.plan {
+			.myaccount-link-desc {
+				width: 100%;
+			}
+
+			.myaccount-plan-text {
+				position: relative;
+				top: 12px;
+			}
+		}
+
+		.btn {
+			&.change-plan, &.apply-plan, &.reactivate-plan {
+				color: #fff;
+				margin-bottom: 0;
+				margin-top: 0;
+				float: right;
+			}
+
+			&.apply-plan {
+				margin-right: 15px;
+			}
+
+			&.reactivate-plan {
+				background: #59C800;
+
+				.lh-transition(all, 500ms, ease);
+
+				&.processing {
+					.lh-opacity(0.5);
+				}
+			}
+		}
+
+		.shined_up_call_to_action {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin-top: 25px;
+			color: #fff;
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+
+				.myaccount-go-arrow {
+					margin-right: 0px;
+				}
+			}
+
+			.cta_message {
+				font-weight: 400;
+				letter-spacing: 0.5px;
+				line-height: 21px;
+			}
+
+			.cta_arrow {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				top: 0;
+			}
+
+			.myaccount-go-arrow {
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				margin-top: -15px;
+				margin-right: 15px;
+				background-size: 30px 30px;
+				height: 30px;
+				width: 30px;
+
+				.lh-transition(all 150ms ease);
+			}		
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<h2><%= lang.t('camdetails_access_header') %></h2>
+<table class="camera-access-log">
+	<tr>
+		<th><%= lang.t('camdetails_access_email') %></th>
+		<th><%= lang.t('camdetails_access_ip') %></th>
+		<th><%= lang.t('camdetails_access_timestamp') %></th>
+	</tr>
+<% _.each(access_log, function(event) { %>
+	<tr>
+		<td><%= event['user']['email'] %></td>
+		<td><%= event['remote_ip'] %></td>
+		<td><%= event['time_stamp'] %></td>
+	</tr>
+
+<% }); %>
+
+
+</table>
+

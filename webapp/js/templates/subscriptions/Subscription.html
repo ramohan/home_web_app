@@ -1,0 +1,124 @@
+
+<div class="breadcrumb_container">
+	<div class="container">
+		<div class="row">
+			<div id="breadcrumbs" class="col-md-10 col-md-offset-1"></div>
+		</div>
+	</div>
+</div>
+
+<div class="subscription-container container">
+<div class="subs">
+
+<div class="subs-pageheader row subs-header">
+	<div class="col-md-10 col-md-offset-1">
+		<h2><%= user_has_plan ? lang.t('subs_header_change') : lang.t('subs_header') %></h2>
+			<% if(!user_has_plan) { %>
+			<div class="sub-info">
+			<%= lang.t('subs_header_info') %>
+			</div>
+			<% } %>
+
+			<% if(user_pending_plan) { %>
+			<span class="pending-plan">
+				<%= pending_message %>
+			</span>
+			<% } %>
+
+			<% if(has_annual_plan) { %>
+			<span class="annual pending-plan">
+				<%= annual_plan_sub %>
+			</span>
+			<% } %>
+	</div>
+</div>
+
+<div class="plan-box-list row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="row">
+      <% _.each(all_plans, function(plan) { %>
+        <div class="col-sm-4">
+          <span class="plan-box <%= plan.active ? 'highlight' : '' %> <% if (!user_has_plan && (plan.name == 'hubble-tier2')) { %> recommended <% } %> ">
+            <span class="box-top-section">
+              <span class="plan-name">
+                <%= lang.t('plans_{0}_title'.format(plan.name)) %>
+              </span>
+              <% if(!user_has_plan && (plan.name == 'hubble-tier2')) { %>
+                <span class="recommended-plan">
+                  <%= lang.t('myaccount_recommended') %>
+                </span>
+              <% } %>
+            </span>
+            <span class="box-bottom-section">
+              <span class="plan-desc">
+                <%= lang.t('plans_{0}_desc'.format(plan.name)) %>
+              </span>
+              <span class="plan-cost">
+                <span class="plan-dollar"><%=
+                  plan.currency.symbol.actual %></span><%= plan.price.actual %>
+                <span class="plan-currency"><%= plan.currency.code.actual %></span>
+                <% if (plan.currency.code.actual !== plan.currency.code.local) { %>
+                  <span class="plan-currency">
+                    Approximately
+                    <%= plan.currency.symbol.local %><%= plan.price.local %>
+                    <%= plan.currency.code.local %>
+                  </span>
+                <% } %>
+                <span class="per-month">
+                  <%= lang.t('plans_permonth') %>
+                </span>
+                <span class="dev-limit">
+                  <%= lang.t('plans_{0}_dev_limit'.format(plan.name)) %>
+                </span>
+              </span>
+              <span class="plan-gobutton choose_sub_button <%= plan.active ? 'highlight' : '' %>"
+                data-plan="<%= plan.name %>">
+                <span class="gobutton-text <%= plan.active ? 'highlight' : '' %>"
+                  data-plan="<%= plan.name %>">
+                  <% if (user_has_plan) { %>
+                    <%= plan.active ?
+                      lang.t('plans_yourcurrentplan') :
+                      lang.t('plans_switchplans') %>
+                  <% } else { %>
+                    <%= lang.t('plans_getstarted') %>
+                  <% } %>
+                </span>
+              </span>
+            </span>
+            <div class="triangle-up"><div></div></div>
+          </span>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+
+<% if(user_has_plan) { %>
+<div class="row cancel-plan">
+	<div class="col-md-10 col-md-offset-1">
+		<span class="cancel-message">
+			<%= lang.t('plan_cancel_message') %>
+		</span>
+		<button class="btn default-btn cancelsub subs-continuebutton">
+			<%= lang.t('plans_cancelbutton_text') %>
+		</button>
+	</div>
+</div>
+<% } %>
+
+<span class="plans-bottomtext">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 plans-bottomtext-inner">
+    <%= lang.t('vat_disclaimer') %>
+			<p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><%= lang.t('plans_infotext1') %></p>
+			<p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><%= lang.t('plans_infotext2') %></p>
+			<p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><%= lang.t('plans_infotext3') %></p>
+		</div>
+	</div>
+</span>
+
+</div><!-- subs
+</div>
+
+
+

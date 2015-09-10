@@ -1,0 +1,83 @@
+
+
+
+<div class="sharing-container">
+
+	<h4>Shared by Me</h4>
+	<ul class="shared-by-me">
+	<% _.each(my_shares, function(val, idx) { %>
+		<li><%= val['secondary_user']['name'] %> (<%= val['secondary_user']['email'] %>)
+			<span class="badge remove-sharing pull-right" 
+			data-registration-id="<%= val['device']['registration_id'] %>"
+			data-user-id="<%= val['secondary_user']['id'] %>">Revoke Permission
+			</span>
+		</li>
+
+
+	<% }); %>
+	<% if (my_shares.length == 0) { %>
+		<li><em>None</em></li>
+	<% } %>
+	
+	</ul>
+
+
+	<h4>Shared with Me</h4>
+	<ul class="shared-with-me">
+	<% _.each(other_shares, function(val, idx) { %>
+		<li><%= val['primary_user']['name'] %> (<%= val['primary_user']['email'] %>)
+		</li>
+
+	<% }); %>
+	<% if (other_shares.length == 0) { %>
+		<li><em>None</em></li>
+	<% } %>
+
+	</ul>
+
+	<h4>Outgoing Invitations</h4>
+	<ul class="shared-outgoing-invitations">
+	<% _.each(invitations, function(val, idx) { %>
+		<li><%= val['shared_with'] %>
+			<span class="badge cancel-invitation pull-right" 
+			data-registration-id="<%= val['device']['registration_id'] %>"
+			data-invite-email="<%= val['shared_with'] %>">Cancel</span>
+		</li>
+
+	<% }); %>
+	<% if (invitations.length == 0) { %>
+		<li><em>None</em></li>
+	<% } %>
+
+	</ul>
+</div>
+
+
+<div class="modal fade" id="confirmation_dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-title">
+				<button type="button" class="close" data-dismiss="modal" 
+				aria-hidden="true">&times;</button>
+			
+				<h4>Please Confirm</h4>
+			</div>		
+			<div class="modal-body">
+			
+	
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">
+					Close
+				</button>
+				<button type="button" class="btn btn-primary" id="confirm_button" 
+					data-user-id="" data-action="" data-invite-email=""
+					data-registration-id="">
+					Continue
+				</button>
+			</div>
+		</div><!-- end modal-content -->
+	</div><!-- end modal-dialog -->
+</div><!-- end modal fade -->
+
+

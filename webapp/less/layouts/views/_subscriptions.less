@@ -1,0 +1,249 @@
+.subscription-container {
+	color: #515151;
+	
+	.subs-header {
+		margin-top: 40px;
+		margin-bottom: 15px;
+		font-weight: bold;
+		font-size: 15pt;
+		text-align: left;
+
+		.pending-plan {
+			font-weight: 400;
+			font-size: 16px;
+			margin-bottom: 30px;
+			margin-top: 0;
+
+			&:first-child {
+				margin-top: 55px;
+			}
+
+			&.annual {
+				background-color: #59C800;
+			}
+		}
+	}
+
+	h2 {
+		font-weight: 600;
+		margin-bottom: 25px;
+	}
+
+	.sub-info {
+		font-size: 16px;
+		font-weight: 400;
+
+		p {
+			margin-bottom: 20px;
+		}
+	}
+
+	.plan-box {
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 105%;
+			width: 100%;
+			border: 3px solid #bebebe;
+			border-bottom: 20px solid #bebebe;
+
+			.lh-opacity(0);
+			.lh-transition(all 100ms ease);
+		}			
+
+		&:hover {
+			margin-top: -10px;
+			border-bottom: 1px solid #59C800 !important;
+
+			.plan-name {
+				border-bottom: 1px solid #59C800 !important;
+			}
+
+			&:after {
+				.lh-opacity(1);
+				border: 3px solid #59C800 !important;
+				border-bottom: 20px solid #59C801 !important;
+			}
+
+			.plan-gobutton {
+				background-color: #59C800 !important;
+			}
+		}
+
+		&.highlight .plan-name {
+			border-bottom: 1px solid #59C800;
+		}
+			 
+		&.highlight .plan-gobutton {
+			cursor: default;
+			background-color: #59C800;
+		}
+			 
+		&.highlight {
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 105%;
+				width: 100%;
+				border: 3px solid #59C800;
+				border-bottom: 20px solid #59C800;
+
+				.lh-opacity(1);
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&.recommended .plan-name {
+			border-bottom: 1px solid #00adf7;
+		}
+			 
+		&.recommended .plan-gobutton {
+			cursor: default;
+			background-color: #00adf7;
+		}
+			 
+		&.recommended {
+			margin-top: -10px;
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 105%;
+				width: 100%;
+				border: 3px solid #00adf7;
+				border-bottom: 20px solid #00adf7;
+
+				.lh-opacity(1);
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.box-top-section {
+			position: relative;
+
+			.recommended-plan {
+				color: #ccc;
+				font-size: 13px;
+				text-transform: uppercase;
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				bottom: 5px;
+			}
+		}
+
+		.box-bottom-section {
+			position: relative;
+			z-index: 2;
+		}
+
+
+		.triangle-up {
+			position: absolute;
+			bottom: -154px;
+		    width: 100%;
+		    height: 0;
+		    padding-left:50%;
+		    padding-bottom: 50%;
+		    overflow: hidden;
+		    z-index: 1;
+
+		    div {
+			    width: 0; 
+			    height: 0;
+			    margin-left:-500px;
+			    border-left: 500px solid transparent;
+			    border-right: 500px solid transparent;
+			    border-bottom: 40px solid #e4e4e4;
+		    }
+		}		
+	}
+
+	.plan-gobutton {
+		display: block;
+		margin: 25px auto 0;
+		.lh-border-radius(6px);
+		width: 130px;
+		height: 45px;
+		background-color: #aaa;
+		cursor: pointer;
+
+		.gobutton-text {
+			left: auto;
+			font-weight: 300;
+			font-size: 18px;
+			position: relative;
+			top: 10px;
+			color: #fff;			
+		}
+	}
+
+	.cancel-plan {
+		margin-top: 100px;
+		position: relative;
+		z-index: 10;
+
+		.cancel-message {
+			margin-right: 10px;
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+
+		.cancelsub {
+			position: relative;
+			top: -1px;
+			color: #fff;
+			background: #aaa;
+
+			.lh-transition(all 100ms ease);
+
+			&:hover {
+				background: #d9534f;
+			}
+		}
+	}
+
+	.plans-bottomtext {
+		clear: both;
+		display: block;
+		text-align: left;
+		margin-top: 25px;
+		margin-bottom: 100px;
+		position: relative;
+		z-index: 2;
+
+		.plans-bottomtext-inner {
+			font-size: 14px;
+			line-height: 21px;
+			background: rgba(255,255,255,0.5);
+			padding: 30px 30px 15px;
+			.lh-border-radius(10px);
+			margin-top: 10px;
+		}
+
+		.glyphicon {
+			margin-right: 10px;
+			color: #888;
+		}
+	}
+	   
+	.plans-bottomtext button {
+		float: right;
+	}
+}

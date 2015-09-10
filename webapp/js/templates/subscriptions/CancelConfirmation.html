@@ -1,0 +1,41 @@
+
+<div class="breadcrumb_container">
+	<div class="container">
+		<div class="row">
+			<div id="breadcrumbs" class="col-md-10 col-md-offset-1"></div>
+		</div>
+	</div>
+</div>
+
+<div class="cancelconfirm-container container">
+<div class="cancelconfirm row">
+	<div class="col-md-10 col-md-offset-1">
+		<div class="cancelconfirm-header">
+			<h2><%= lang.t('cancelconfirm_header') %></h2>
+		</div>
+
+		<div class="cancelconfirm-message-container">
+			<div class="cancelconfirm-yourplan">
+				<strong>
+				<%= lang.t('cancelconfirm_yourplan', {
+					plan: lang.t('plans_{0}_title'.format(plan.plan_id))
+				}) %>
+				</strong>
+			</div>
+		</div>
+
+		<button class="subs-continuebutton cancel-button btn change-plan">
+			<%= lang.t('cancelconfirm_button') %>
+		</button>
+
+		<div class="cancelconfirm-message">
+			<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+			<%= lang.t('cancelconfirm_message') %>
+		</div>
+	</div>
+
+</div>
+</div>
+
+
+

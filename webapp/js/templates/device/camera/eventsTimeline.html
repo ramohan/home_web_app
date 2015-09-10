@@ -1,0 +1,77 @@
+
+<div id="pagelink_container">
+	<span id="event_pagelinks"></span>
+</div>
+
+
+<ul class="camera-timeline">
+<% _.each(device_events, function(event) { %>
+	<li>
+		<div class="device-timeline-item">
+			<% if (event.thumbnail !== undefined) { %>			
+
+				<% if (event.video !== "") { %>
+					<div id="vid_<%= event.id %>" class="activate-motion-event">
+						<span class="play-button-wrapper"
+							class="activate-motion-event"
+							data-event-id="<%= event.id %>">
+							<span class="play-button"
+							class="activate-motion-event"
+							data-event-id="<%= event.id %>"></span>
+						</span>
+				<% } %>
+
+			<img src="<%= event.thumbnail %>" 
+			class="activate-motion-event"
+			data-event-id="<%= event.id %>">
+
+				<% if (event.video !== "") { %>
+					</div>
+				<% } %>
+
+			<% } %>
+
+			<% if (event.type == 'sound') { %>
+			<div class="sound-event"></div>
+			<% } %>
+
+			<% if (event.type == 'temperature') { %>
+			<div class="temperature-event">
+				<span class="temp-event-wrapper">
+					<span class="temperature-box">
+						<span class="temp-notice-display">
+						<%= event.value %>°<%= event.tempformat %>
+						</span>
+					</span>
+					<span class="temperature-icon-<%= event.temptype %>">
+					</span>
+				</span>
+			</div>
+			<% } %>
+
+			<span class="event-title-bar">
+				<% if (event.type == 'motion' && event.video !== "") { %>
+					<a href="<%= event.video %>">
+						<span class="glyphicon glyphicon-download"></span>
+					</a>
+				<% } %>
+				<span class="event-title"><%= event.title %></span>
+				<span class="event-date"><%= event.date %></a> at 
+				<span class="event-timeofday"><%= event.timeofday %>
+
+			</span>
+
+		</div>
+	</li>
+
+<% }) %>
+</ul>
+
+<div id="events_options">
+	
+</div>
+
+<div id="events_timeline">
+</div>
+
+

@@ -1,0 +1,30 @@
+<div class="minicontrols">
+
+
+<a href="#" class="brightness">Brightness</a>
+<div class="brightness_ctrl" id="cam_brightness_<%= device.get('id') %>"></div>
+
+<a href="#" class="contrast">Contrast</a>
+<div class="contrast_ctrl" id="cam_contrast_<%= device.get('id') %>"></div>
+
+<a href="#" class="zoom">Zoom</a>
+<div class="zoom_ctrl" id="cam_zoom_<%= device.get('id') %>"></div>
+
+<a href="#" class="melody">Melody</a>
+<div class="melody_ctrl" id="cam_melody_<%= device.get('id') %>">
+1 <input type="radio" name="melody_<%= device.get('id') %>" value="1">
+2 <input type="radio" name="melody_<%= device.get('id') %>" value="2">
+3 <input type="radio" name="melody_<%= device.get('id') %>" value="3">
+4 <input type="radio" name="melody_<%= device.get('id') %>" value="4">
+5 <input type="radio" name="melody_<%= device.get('id') %>" value="5">
+<input type="button" value="Stop Melody">
+</div>
+
+<a href="#" class="pan">Pan</a>
+<div class="pan_ctrl" id="cam_pan_<%= device.get('id') %>"></div>
+
+<a href="#" class="tilt">Tilt</a>
+<div class="tilt_ctrl" id="cam_tilt_<%= device.get('id') %>"></div>
+
+
+</div>

@@ -1,0 +1,54 @@
+
+<div class="breadcrumb_container">
+	<div class="container">
+		<div class="row">
+			<div id="breadcrumbs" class="col-md-10 col-md-offset-1"></div>
+		</div>
+	</div>
+</div>
+
+<div class="purchaseconfirm-container container">
+	<div class="row">
+		<div class="purchaseconfirm col-md-8 col-md-offset-2">
+
+			<h2 class="subs-pageheader purchaseconfirm-header">
+				<%= lang.t('purchaseconfirm_header') %>
+			</h2>
+
+			<div class="purchaseconfirm-message-container">
+				<div class="purchaseconfirm-message">
+					<%= message %>
+				</div>
+
+				<% if(!is_error) { %>
+
+					<% if(user_pending_plan) { %>
+					<span class="pending-plan">
+						<%= pending_message %>
+						<% if(contact_support_message) { %>
+							<br/><%= lang.t('annualpending_contact_support') %>
+						<% } %>
+					</span>
+					<% } else { %>
+					<div class="purchaseconfirm-applyplan">
+						<strong><%= lang.t('purchaseconfirm_apply') %></strong>
+						<a class="btn btn-default apply-plan" href="/#devicesubscriptions">
+							<%= lang.t('purchaseconfirm_apply_btn') %>
+						</a>
+					</div>
+					<% } %>
+
+				<% } %>
+
+				<div class="purchaseconfirm-undermessage">
+					<%= undermessage %>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+

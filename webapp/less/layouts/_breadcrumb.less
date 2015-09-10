@@ -1,0 +1,56 @@
+.breadcrumb_container {
+	background-color: #f5f5f5;
+}
+
+#breadcrumbs {
+	text-align: left;
+
+	.breadcrumb {
+		background-color: transparent;
+		margin-bottom: 0;
+		padding: 20px 0 20px;
+
+		.lh-border-radius(0);
+	}
+
+	a {
+		display: inline-block;
+		color: #00ADF7;
+		position: relative;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -20px;
+			width: 100%;
+			border-bottom: 3px solid #00ADF7;
+
+			.lh-opacity(0);
+			.lh-transition(all 100ms ease);
+		}		
+
+		&:hover {
+			text-decoration: none;
+
+			&:after {
+				.lh-opacity(1);
+			}
+		}
+	}
+
+	li {
+		&.active {
+			a {
+				font-weight: 600;
+				cursor: default;
+
+				&:hover {
+					&:after {
+						.lh-opacity(0);
+					}
+				}
+			}
+		}
+	}	
+}

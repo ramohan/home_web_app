@@ -1,0 +1,66 @@
+
+<div class="breadcrumb_container">
+	<div id="breadcrumbs"></div>
+</div>
+
+<div class="subscription-container">
+<div class="subs">
+
+<span class="subs-header"><%= user_has_plan ? lang.t('subs_header_change') :
+	lang.t('subs_header') %></span>
+
+
+<% _.each(all_plans, function(plan) { %>
+
+<span class="plan-box <%= plan.highlight ? 'highlight' : '' %>">
+
+	<span class="box-top-section">
+		<span class="plan-name">
+			<%= lang.t('plans_{0}_title'.format(plan.plan_id)) %>
+		</span>
+	</span>
+	<span class="box-bottom-section">
+		<span class="plan-desc">
+			<%= lang.t('plans_{0}_desc'.format(plan.plan_id)) %>
+		</span>
+
+		<span class="plan-cost">
+			$<%= plan.price_cents / 100 %>
+		</span>
+
+		<span class="plan-gobutton choose_sub_button"
+			data-plan="<%= plan.plan_id %>">
+			<span class="gobutton-text" data-plan="<%= plan.plan_id %>">
+				<% if (user_has_plan) { %>
+				<%= plan.is_active ? lang.t('plans_yourcurrentplan') :
+					lang.t('plans_switchplans') %>
+				<% } else { %>
+					<%= lang.t('plans_getstarted') %>
+				<% } %>
+
+			</span>
+			<span class="gobutton-icon <%= plan.is_active ? 'active' : '' %>"
+				data-plan="<%= plan.plan_id %>">
+			</span>
+		</span>
+
+	</span>
+
+</span>
+
+<% }); %>
+
+
+<span class="plans-bottomtext">
+	<%= lang.t('plans_infotext') %>
+
+<button class="choose_sub_button" data-plan="freemium">
+	<%= lang.t('plans_cancelbutton_text') %>
+</button>
+
+
+</div><!-- subs -->
+</div>
+
+
+
